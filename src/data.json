@@ -1,0 +1,282 @@
+{
+  "name": "Vinay",
+  "title": "Flutter Developer | iOS Developer | Full Stack Developer",
+  "tagline": "Building polished mobile products — from native camera pipelines to on-device ML.",
+  "email": "hello@vinay.dev",
+  "github": "https://github.com",
+  "linkedin": "https://linkedin.com",
+  "resume": "/resume.pdf",
+  "siteUrl": "https://vinay.dev",
+  "seo": {
+    "title": "Vinay | Flutter Developer, iOS Developer & Full Stack Developer",
+    "description": "Hire Vinay — expert Flutter developer, iOS developer (Swift/AVFoundation), and full stack developer. Portfolio of mobile apps, native iOS camera work, GraphQL/Node.js backends, and on-device ML.",
+    "keywords": [
+      "Flutter developer",
+      "Flutter developer portfolio",
+      "iOS developer",
+      "Swift developer",
+      "iOS app developer",
+      "full stack developer",
+      "full stack mobile developer",
+      "mobile app developer",
+      "Dart developer",
+      "AVFoundation",
+      "Node.js developer",
+      "GraphQL developer",
+      "cross platform developer",
+      "hire Flutter developer",
+      "hire iOS developer"
+    ],
+    "ogImage": "/profile.png",
+    "locale": "en_US",
+    "jobTitle": "Flutter Developer | iOS Developer | Full Stack Developer",
+    "skills": [
+      "Flutter",
+      "Dart",
+      "iOS",
+      "Swift",
+      "AVFoundation",
+      "React",
+      "Node.js",
+      "GraphQL",
+      "Firebase",
+      "On-device ML"
+    ]
+  },
+  "bio": "I design and ship production mobile apps end-to-end — Flutter for cross-platform speed, Swift when native camera and AVFoundation matter, and on-device ML when the experience needs to work offline. I've built inspection tools, dealership event platforms, and marketplace apps used in the real world.",
+  "profileImage": "/profile.png",
+  "stats": [
+    { "value": 24, "suffix": "+", "label": "Projects completed" },
+    { "value": 5, "suffix": "+", "label": "Years of experience" },
+    { "value": 18, "suffix": "+", "label": "Worldwide clients" }
+  ],
+  "skills": [
+    { "name": "Flutter", "level": 95, "logo": "flutter" },
+    { "name": "Swift / iOS", "level": 85, "logo": "swift" },
+    { "name": "Node.js", "level": 80, "logo": "nodedotjs" },
+    { "name": "GraphQL", "level": 78, "logo": "graphql" },
+    { "name": "On-device ML", "level": 82, "logo": "tensorflow" },
+    { "name": "React", "level": 75, "logo": "react" }
+  ],
+  "techStack": [
+    { "name": "Flutter", "logo": "flutter" },
+    { "name": "Dart", "logo": "dart" },
+    { "name": "Swift", "logo": "swift" },
+    { "name": "AVFoundation", "logo": "apple" },
+    { "name": "Node.js", "logo": "nodedotjs" },
+    { "name": "GraphQL", "logo": "graphql" },
+    { "name": "Firebase", "logo": "firebase" },
+    { "name": "Core ML", "logo": "apple" },
+    { "name": "React", "logo": "react" },
+    { "name": "REST APIs", "logo": "fastapi" }
+  ],
+  "experience": [
+    {
+      "id": "automotive-tech",
+      "company": "Automotive Tech Partner",
+      "role": "Senior Flutter / Mobile Engineer",
+      "location": "Remote",
+      "start": "Jan 2024",
+      "end": "Present",
+      "duration": "1.5+ yrs",
+      "summary": "Shipped field inspection tooling with native camera pipelines and on-device ML for automotive partners.",
+      "projectSlugs": ["vehicle-inspection"]
+    },
+    {
+      "id": "car-events-startup",
+      "company": "Car Events Startup",
+      "role": "Full-Stack Mobile Engineer",
+      "location": "Hybrid",
+      "start": "Mar 2023",
+      "end": "Dec 2023",
+      "duration": "10 mos",
+      "summary": "Built dealership event products across Flutter app and React marketing site on a shared Node API.",
+      "projectSlugs": ["dealership-events", "car-events-platform"]
+    },
+    {
+      "id": "marketplace-platform",
+      "company": "Marketplace Platform",
+      "role": "Flutter + GraphQL Engineer",
+      "location": "Remote",
+      "start": "Jun 2021",
+      "end": "Feb 2023",
+      "duration": "1 yr 9 mos",
+      "summary": "Owned mobile client and GraphQL API for a scrap marketplace — listings, chat, and order flows.",
+      "projectSlugs": ["scrap-marketplace"]
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "slug": "vehicle-inspection",
+      "companyId": "automotive-tech",
+      "title": "Vehicle Inspection App",
+      "tagline": "Field-ready inspections with native camera + on-device ML",
+      "description": "Mobile inspection workflow with native iOS camera capture, guided photo sequences, and on-device ML for damage detection — built for reliability in the field.",
+      "thumbnail": "/projects/vehicle-inspection.svg",
+      "gallery": [
+        "/projects/vehicle-inspection.svg",
+        "/projects/vehicle-inspection-flow.svg"
+      ],
+      "tech": ["Flutter", "Swift", "AVFoundation", "On-device ML"],
+      "techLogos": ["flutter", "swift", "apple", "tensorflow"],
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#ff6b00",
+      "overview": {
+        "problem": "Inspectors needed a fast, reliable way to capture structured vehicle photos and flag damage — even with poor connectivity. Generic camera UIs weren't enough; the flow had to be guided and offline-capable.",
+        "howItWorks": [
+          "Inspector starts a job and follows a step-by-step capture checklist (angles, damage zones, VIN, odometer).",
+          "A native iOS camera module (AVFoundation) handles high-quality capture, focus, flash, and overlays for framing.",
+          "On-device ML scores images for damage hints so the UI can prompt for retakes or extra shots without waiting on a server.",
+          "Results sync when online; locally stored drafts keep work safe if the network drops mid-inspection."
+        ],
+        "whatIDid": [
+          "Built the Flutter app shell: job list, inspection wizard, gallery review, and sync status UI.",
+          "Implemented a Swift/AVFoundation camera plugin for controlled capture and overlays.",
+          "Integrated on-device ML inference for damage detection cues during capture.",
+          "Designed offline-first storage and resilient upload/retry for completed inspections."
+        ],
+        "highlights": [
+          "Native camera quality with Flutter UX",
+          "Works offline in the field",
+          "Guided capture reduces incomplete jobs"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "slug": "dealership-events",
+      "companyId": "car-events-startup",
+      "title": "Dealership Events App & Website",
+      "tagline": "Events, RSVPs, and attendee engagement for dealerships",
+      "description": "Event discovery and registration experience for car dealerships — companion mobile app plus a marketing website for schedules, RSVPs, and attendee engagement.",
+      "thumbnail": "/projects/dealership-events.svg",
+      "gallery": [
+        "/projects/dealership-events.svg",
+        "/projects/dealership-events-web.svg"
+      ],
+      "tech": ["Flutter", "React", "Node.js"],
+      "techLogos": ["flutter", "react", "nodedotjs"],
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#ff8c1a",
+      "overview": {
+        "problem": "Dealerships ran launches and customer events with scattered spreadsheets and static landing pages. They needed one place for schedules, RSVPs, and day-of engagement.",
+        "howItWorks": [
+          "Marketing site promotes upcoming events and collects interest / RSVPs.",
+          "Flutter app lets staff and guests browse the schedule, register, and check in.",
+          "Node.js API stores events, attendees, and registration state shared by web + mobile.",
+          "Push / in-app updates keep attendees informed when times or locations change."
+        ],
+        "whatIDid": [
+          "Shipped the Flutter companion app for event discovery, RSVP, and check-in.",
+          "Built the marketing/events website in React for SEO-friendly promotion pages.",
+          "Implemented Node.js backend endpoints for events, attendees, and registrations.",
+          "Connected web and mobile to the same API so data stayed in sync."
+        ],
+        "highlights": [
+          "Shared backend for web + mobile",
+          "RSVP and check-in in one flow",
+          "Dealership-ready branding surfaces"
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "slug": "car-events-platform",
+      "companyId": "car-events-startup",
+      "title": "Car Events Platform",
+      "tagline": "Enthusiast-first events with live updates",
+      "description": "Cross-platform Flutter app for browsing, joining, and managing automotive events with real-time updates and a clean, enthusiast-first UI.",
+      "thumbnail": "/projects/car-events.svg",
+      "gallery": [
+        "/projects/car-events.svg",
+        "/projects/car-events-map.svg"
+      ],
+      "tech": ["Flutter", "Firebase"],
+      "techLogos": ["flutter", "firebase"],
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#ff6b00",
+      "overview": {
+        "problem": "Car enthusiasts struggled to discover meets and track changes. Organizers needed a lightweight way to publish events and talk to attendees in real time.",
+        "howItWorks": [
+          "Users browse upcoming meets by date, location, and interest tags.",
+          "Organizers create and manage events from the same app.",
+          "Firebase powers auth, event documents, and live listeners for schedule changes.",
+          "Attendees join events and see live updates without refreshing."
+        ],
+        "whatIDid": [
+          "Designed and built the full Flutter UI for discovery, detail, and organizer tools.",
+          "Modeled Firebase collections for events, RSVPs, and profiles.",
+          "Wired real-time listeners so RSVPs and schedule edits update instantly.",
+          "Polished map/list views and empty states for a clean enthusiast feel."
+        ],
+        "highlights": [
+          "Real-time Firebase updates",
+          "Organizer + attendee modes",
+          "Cross-platform Flutter client"
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "slug": "scrap-marketplace",
+      "companyId": "marketplace-platform",
+      "title": "Scrap Marketplace",
+      "tagline": "Buy & sell scrap with GraphQL-backed flows",
+      "description": "Marketplace for buying and selling scrap materials — Flutter client backed by a Node.js + GraphQL API for listings, chat, and order flows.",
+      "thumbnail": "/projects/scrap-marketplace.svg",
+      "gallery": [
+        "/projects/scrap-marketplace.svg",
+        "/projects/scrap-marketplace-flow.svg"
+      ],
+      "tech": ["Flutter", "Node.js", "GraphQL"],
+      "techLogos": ["flutter", "nodedotjs", "graphql"],
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#e65c00",
+      "overview": {
+        "problem": "Scrap buyers and sellers needed listings, chat, and order tracking in one app — not fragmented WhatsApp threads and spreadsheets.",
+        "howItWorks": [
+          "Sellers create listings with photos, material type, weight/price, and location.",
+          "Buyers search/filter and open chats to negotiate.",
+          "GraphQL API serves listings, users, conversations, and order status to the Flutter client.",
+          "Orders move through simple states (inquiry → confirmed → completed) with notification hooks."
+        ],
+        "whatIDid": [
+          "Built the Flutter marketplace UI: browse, listing detail, chat, and order history.",
+          "Designed and implemented the Node.js + GraphQL schema and resolvers.",
+          "Added auth, listing CRUD, messaging, and order state transitions.",
+          "Optimized list queries and image handling for snappy mobile performance."
+        ],
+        "highlights": [
+          "End-to-end GraphQL API",
+          "In-app chat + orders",
+          "Production-minded Flutter client"
+        ]
+      }
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "Vinay delivered a rock-solid inspection app that held up in real field conditions. The native camera work and offline ML were exactly what we needed.",
+      "author": "Product Lead",
+      "role": "Automotive Tech Partner"
+    },
+    {
+      "id": 2,
+      "quote": "Fast, thoughtful, and great at balancing Flutter speed with native quality where it counts. Our dealership events stack shipped on time and felt premium.",
+      "author": "Founder",
+      "role": "Car Events Startup"
+    },
+    {
+      "id": 3,
+      "quote": "Clear communication and excellent GraphQL/API ownership. The marketplace app was smooth for users and maintainable for our team.",
+      "author": "Engineering Manager",
+      "role": "Marketplace Platform"
+    }
+  ]
+}

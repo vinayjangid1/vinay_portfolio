@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://vinay.dev/sitemap.xml
+
+# Prefer HTTPS content
+Host: https://vinay.dev

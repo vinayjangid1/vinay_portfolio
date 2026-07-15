@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <rect width="1200" height="750" fill="#000000"/>
+  <rect x="100" y="120" width="1000" height="80" rx="12" fill="#111111" stroke="#ff6b00" stroke-opacity="0.5"/>
+  <circle cx="160" cy="160" r="18" fill="#ff6b00"/>
+  <rect x="200" y="148" width="200" height="24" rx="6" fill="#ffffff" opacity="0.3"/>
+  <rect x="100" y="240" width="300" height="360" rx="16" fill="#111111" stroke="#ffffff" stroke-opacity="0.1"/>
+  <rect x="430" y="240" width="300" height="360" rx="16" fill="#111111" stroke="#ffffff" stroke-opacity="0.1"/>
+  <rect x="760" y="240" width="300" height="360" rx="16" fill="#111111" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="600" y="680" text-anchor="middle" fill="#a3a3a3" font-family="system-ui,sans-serif" font-size="22">Inspection flow — replace with screenshot</text>
+</svg>

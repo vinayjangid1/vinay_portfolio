@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111111"/>
+      <stop offset="0.5" stop-color="#0a0a0a"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="200" y1="200" x2="600" y2="800" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ff6b00"/>
+      <stop offset="1" stop-color="#cc5500"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <circle cx="400" cy="380" r="140" fill="url(#accent)" opacity="0.9"/>
+  <ellipse cx="400" cy="720" rx="220" ry="260" fill="url(#accent)" opacity="0.85"/>
+  <text x="400" y="920" text-anchor="middle" fill="#a3a3a3" font-family="system-ui,sans-serif" font-size="28" opacity="0.7">Replace with your photo</text>
+</svg>

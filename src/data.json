@@ -70,6 +70,44 @@
     { "name": "React", "logo": "react" },
     { "name": "REST APIs", "logo": "fastapi" }
   ],
+  "iosDemos": [
+    {
+      "id": "native-home",
+      "title": "Native iOS craft",
+      "subtitle": "Swift · UIKit / SwiftUI",
+      "island": "Vinay · iOS",
+      "islandDetail": "Native Swift developer · available for hire",
+      "description": "I build production iOS apps with Swift — clean architecture, smooth animations, and platform-native polish.",
+      "points": ["Swift & SwiftUI", "Human Interface Guidelines", "App Store–ready UX"]
+    },
+    {
+      "id": "camera",
+      "title": "AVFoundation camera",
+      "subtitle": "Capture pipelines",
+      "island": "Camera live",
+      "islandDetail": "AVCaptureSession · focus · flash · overlays",
+      "description": "Custom camera modules with guided framing, photo sequences, and reliable field capture — not just UIImagePicker.",
+      "points": ["AVCaptureSession", "Focus & exposure control", "Real-time overlays"]
+    },
+    {
+      "id": "ml",
+      "title": "On-device ML",
+      "subtitle": "Core ML · Vision",
+      "island": "ML scanning…",
+      "islandDetail": "Core ML inference running on-device",
+      "description": "On-device Vision / Core ML for damage hints and classification that works offline in the field.",
+      "points": ["Core ML models", "Vision framework", "Offline-first results"]
+    },
+    {
+      "id": "ship",
+      "title": "Ship & maintain",
+      "subtitle": "Flutter + native bridges",
+      "island": "Build success",
+      "islandDetail": "Flutter ↔ Swift plugin bridge ready",
+      "description": "When Flutter isn’t enough, I drop to native Swift — and wire it back with platform channels / plugins.",
+      "points": ["Method channels", "Native modules", "Release engineering"]
+    }
+  ],
   "experience": [
     {
       "id": "automotive-tech",
@@ -277,6 +315,24 @@
       "quote": "Clear communication and excellent GraphQL/API ownership. The marketplace app was smooth for users and maintainable for our team.",
       "author": "Engineering Manager",
       "role": "Marketplace Platform"
+    },
+    {
+      "id": 4,
+      "quote": "His Swift camera module felt truly native. Clients noticed the polish immediately compared to standard pickers.",
+      "author": "Design Lead",
+      "role": "Inspection Product Team"
+    },
+    {
+      "id": 5,
+      "quote": "Reliable delivery, clear updates, and strong ownership of both mobile and API layers. Would hire again.",
+      "author": "CTO",
+      "role": "Events Platform"
+    },
+    {
+      "id": 6,
+      "quote": "On-device ML worked offline in the field — that alone saved us weeks of backend work and connectivity headaches.",
+      "author": "Operations Manager",
+      "role": "Field Services"
     }
   ]
 }

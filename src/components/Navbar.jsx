@@ -6,6 +6,7 @@ import data from '../data.json'
 
 const links = [
   { href: '#about', label: 'About' },
+  { href: '#ios', label: 'iOS' },
   { href: '#projects', label: 'Experience' },
   { href: '#testimonials', label: 'Testimonials' },
   { href: '#contact', label: 'Contact' },

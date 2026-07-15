@@ -5,6 +5,7 @@ import Hero from '../components/Hero'
 import Stats from '../components/Stats'
 import FlutterNameFill from '../components/FlutterNameFill'
 import About from '../components/About'
+import IosDemo from '../components/IosDemo'
 import Projects from '../components/Projects'
 import Testimonials from '../components/Testimonials'
 import Contact from '../components/Contact'
@@ -13,7 +14,7 @@ import ScrollProgress from '../components/ScrollProgress'
 import ResumeFAB from '../components/ResumeFAB'
 import SEO from '../components/SEO'
 
-const SECTION_IDS = ['hero', 'about', 'projects', 'testimonials', 'contact']
+const SECTION_IDS = ['hero', 'about', 'ios', 'projects', 'testimonials', 'contact']
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -55,6 +56,7 @@ export default function Home() {
         <FlutterNameFill />
         <Stats />
         <About />
+        <IosDemo />
         <Projects />
         <Testimonials />
         <Contact />

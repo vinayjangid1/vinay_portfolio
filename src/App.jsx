@@ -1,10 +1,29 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import Lenis from 'lenis'
 import Home from './pages/Home'
 import ProjectOverview from './pages/ProjectOverview'
 import SplashScreen from './components/SplashScreen'
+import { initAnalytics } from './lib/firebase'
+
+const SPLASH_KEY = 'vinay-portfolio-splash-done'
+
+function hasSeenSplash() {
+  try {
+    return sessionStorage.getItem(SPLASH_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+
+function markSplashDone() {
+  try {
+    sessionStorage.setItem(SPLASH_KEY, '1')
+  } catch {
+    /* ignore */
+  }
+}
 
 function SmoothScroll({ enabled }) {
   const location = useLocation()
@@ -34,27 +53,40 @@ function SmoothScroll({ enabled }) {
   return null
 }
 
-export default function App() {
-  const [loading, setLoading] = useState(true)
+function AppShell() {
+  const [splashVisible, setSplashVisible] = useState(() => !hasSeenSplash())
 
+  const handleSplashDone = useCallback(() => {
+    markSplashDone()
+    setSplashVisible(false)
+  }, [])
+
+  useEffect(() => {
+    initAnalytics()
+  }, [])
+
+  return (
+    <>
+      <SmoothScroll enabled={!splashVisible} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:slug" element={<ProjectOverview />} />
+      </Routes>
+
+      <AnimatePresence>
+        {splashVisible && (
+          <SplashScreen key="splash" onDone={handleSplashDone} />
+        )}
+      </AnimatePresence>
+    </>
+  )
+}
+
+export default function App() {
   return (
     <BrowserRouter>
       <div className="noise-overlay" aria-hidden />
-      <AnimatePresence mode="wait">
-        {loading && (
-          <SplashScreen key="splash" onDone={() => setLoading(false)} />
-        )}
-      </AnimatePresence>
-
-      {!loading && (
-        <>
-          <SmoothScroll enabled />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects/:slug" element={<ProjectOverview />} />
-          </Routes>
-        </>
-      )}
+      <AppShell />
     </BrowserRouter>
   )
 }

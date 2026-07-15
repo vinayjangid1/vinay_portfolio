@@ -1,338 +1,779 @@
 {
-  "name": "Vinay",
-  "title": "Flutter Developer | iOS Developer | Full Stack Developer",
-  "tagline": "Building polished mobile products — from native camera pipelines to on-device ML.",
-  "email": "hello@vinay.dev",
+  "name": "Vinay Kumar Jangid",
+  "title": "iOS & Flutter Developer",
+  "tagline": "Building high-quality iOS and Android apps \u2014 Swift, SwiftUI, Flutter, and on-device ML.",
+  "email": "vinayjangid24@gmail.com",
+  "phone": "+91 7878820191",
+  "location": "Jaipur, Rajasthan",
   "github": "https://github.com",
   "linkedin": "https://linkedin.com",
   "resume": "/resume.pdf",
   "siteUrl": "https://vinay.dev",
   "seo": {
-    "title": "Vinay | Flutter Developer, iOS Developer & Full Stack Developer",
-    "description": "Hire Vinay — expert Flutter developer, iOS developer (Swift/AVFoundation), and full stack developer. Portfolio of mobile apps, native iOS camera work, GraphQL/Node.js backends, and on-device ML.",
+    "title": "Vinay Kumar Jangid | iOS & Flutter Developer",
+    "description": "Hire Vinay Kumar Jangid \u2014 iOS & Flutter developer in Jaipur with 3 years of experience. Swift, SwiftUI, Flutter, Firebase, GraphQL, TFLite, and App Store / Play Store delivery.",
     "keywords": [
       "Flutter developer",
-      "Flutter developer portfolio",
       "iOS developer",
       "Swift developer",
-      "iOS app developer",
-      "full stack developer",
-      "full stack mobile developer",
+      "SwiftUI developer",
+      "Flutter developer Jaipur",
       "mobile app developer",
       "Dart developer",
-      "AVFoundation",
-      "Node.js developer",
-      "GraphQL developer",
-      "cross platform developer",
+      "Firebase developer",
+      "GraphQL mobile developer",
+      "TFLite mobile ML",
       "hire Flutter developer",
       "hire iOS developer"
     ],
     "ogImage": "/profile.png",
     "locale": "en_US",
-    "jobTitle": "Flutter Developer | iOS Developer | Full Stack Developer",
+    "jobTitle": "iOS & Flutter Developer",
     "skills": [
       "Flutter",
       "Dart",
-      "iOS",
       "Swift",
-      "AVFoundation",
-      "React",
-      "Node.js",
-      "GraphQL",
+      "SwiftUI",
       "Firebase",
-      "On-device ML"
+      "GraphQL",
+      "Node.js",
+      "Hive",
+      "TFLite",
+      "Core Data"
     ]
   },
-  "bio": "I design and ship production mobile apps end-to-end — Flutter for cross-platform speed, Swift when native camera and AVFoundation matter, and on-device ML when the experience needs to work offline. I've built inspection tools, dealership event platforms, and marketplace apps used in the real world.",
+  "bio": "Results-driven iOS & Flutter Developer with 3 years of experience designing, developing, and deploying high-quality mobile apps for iOS and Android. Skilled in Swift, SwiftUI, Flutter, and modern mobile frameworks to build efficient, scalable, and visually engaging apps. Experienced in native iOS development, cross-platform solutions, secure authentication, local database management, and machine learning-powered mobile features.",
   "profileImage": "/profile.png",
+  "education": [
+    {
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "school": "University of Maharaja College, Jaipur, Rajasthan",
+      "end": "June 2023"
+    },
+    {
+      "degree": "Senior Secondary (12th - Humanities)",
+      "school": "AN Public School, Jaipur, Rajasthan",
+      "end": "March 2020"
+    }
+  ],
   "stats": [
-    { "value": 24, "suffix": "+", "label": "Projects completed" },
-    { "value": 5, "suffix": "+", "label": "Years of experience" },
-    { "value": 18, "suffix": "+", "label": "Worldwide clients" }
+    {
+      "value": 8,
+      "suffix": "+",
+      "label": "Live projects shipped"
+    },
+    {
+      "value": 3,
+      "suffix": "+",
+      "label": "Years of experience"
+    },
+    {
+      "value": 3,
+      "suffix": "",
+      "label": "Companies worked with"
+    }
   ],
   "skills": [
-    { "name": "Flutter", "level": 95, "logo": "flutter" },
-    { "name": "Swift / iOS", "level": 85, "logo": "swift" },
-    { "name": "Node.js", "level": 80, "logo": "nodedotjs" },
-    { "name": "GraphQL", "level": 78, "logo": "graphql" },
-    { "name": "On-device ML", "level": 82, "logo": "tensorflow" },
-    { "name": "React", "level": 75, "logo": "react" }
+    {
+      "name": "Flutter",
+      "level": 92,
+      "logo": "flutter"
+    },
+    {
+      "name": "Swift / SwiftUI",
+      "level": 90,
+      "logo": "swift"
+    },
+    {
+      "name": "Firebase",
+      "level": 88,
+      "logo": "firebase"
+    },
+    {
+      "name": "GraphQL",
+      "level": 80,
+      "logo": "graphql"
+    },
+    {
+      "name": "On-device ML / TFLite",
+      "level": 82,
+      "logo": "tensorflow"
+    },
+    {
+      "name": "Node.js",
+      "level": 75,
+      "logo": "nodedotjs"
+    }
   ],
   "techStack": [
-    { "name": "Flutter", "logo": "flutter" },
-    { "name": "Dart", "logo": "dart" },
-    { "name": "Swift", "logo": "swift" },
-    { "name": "AVFoundation", "logo": "apple" },
-    { "name": "Node.js", "logo": "nodedotjs" },
-    { "name": "GraphQL", "logo": "graphql" },
-    { "name": "Firebase", "logo": "firebase" },
-    { "name": "Core ML", "logo": "apple" },
-    { "name": "React", "logo": "react" },
-    { "name": "REST APIs", "logo": "fastapi" }
+    {
+      "name": "Flutter",
+      "logo": "flutter"
+    },
+    {
+      "name": "Dart",
+      "logo": "dart"
+    },
+    {
+      "name": "Swift",
+      "logo": "swift"
+    },
+    {
+      "name": "SwiftUI",
+      "logo": "apple"
+    },
+    {
+      "name": "Firebase",
+      "logo": "firebase"
+    },
+    {
+      "name": "GraphQL",
+      "logo": "graphql"
+    },
+    {
+      "name": "Node.js",
+      "logo": "nodedotjs"
+    },
+    {
+      "name": "Hive",
+      "logo": "firebase"
+    },
+    {
+      "name": "TFLite",
+      "logo": "tensorflow"
+    },
+    {
+      "name": "React",
+      "logo": "react"
+    },
+    {
+      "name": "Core Data",
+      "logo": "apple"
+    },
+    {
+      "name": "GitHub",
+      "logo": "github"
+    }
   ],
   "iosDemos": [
     {
       "id": "native-home",
       "title": "Native iOS craft",
-      "subtitle": "Swift · UIKit / SwiftUI",
-      "island": "Vinay · iOS",
-      "islandDetail": "Native Swift developer · available for hire",
-      "description": "I build production iOS apps with Swift — clean architecture, smooth animations, and platform-native polish.",
-      "points": ["Swift & SwiftUI", "Human Interface Guidelines", "App Store–ready UX"]
+      "subtitle": "Swift \u00b7 SwiftUI / UIKit",
+      "island": "Vinay \u00b7 iOS",
+      "islandDetail": "Native Swift & Flutter developer \u00b7 Jaipur",
+      "description": "I build and ship production iOS apps with Swift and SwiftUI \u2014 clean architecture (MVVM/MVC), smooth animations, and App Store polish.",
+      "points": [
+        "Swift & SwiftUI",
+        "MVVM / MVC",
+        "App Store delivery"
+      ]
     },
     {
       "id": "camera",
-      "title": "AVFoundation camera",
-      "subtitle": "Capture pipelines",
+      "title": "Camera & capture",
+      "subtitle": "Field-ready pipelines",
       "island": "Camera live",
-      "islandDetail": "AVCaptureSession · focus · flash · overlays",
-      "description": "Custom camera modules with guided framing, photo sequences, and reliable field capture — not just UIImagePicker.",
-      "points": ["AVCaptureSession", "Focus & exposure control", "Real-time overlays"]
+      "islandDetail": "Camera \u00b7 OCR \u00b7 PDF \u00b7 image workflows",
+      "description": "Custom camera and document-scanner flows \u2014 OCR, PDF generation, image resizing, and platform-channel bridges between Flutter and native Swift.",
+      "points": [
+        "Camera integration",
+        "OCR & PDF",
+        "Platform channels"
+      ]
     },
     {
       "id": "ml",
       "title": "On-device ML",
-      "subtitle": "Core ML · Vision",
-      "island": "ML scanning…",
-      "islandDetail": "Core ML inference running on-device",
-      "description": "On-device Vision / Core ML for damage hints and classification that works offline in the field.",
-      "points": ["Core ML models", "Vision framework", "Offline-first results"]
+      "subtitle": "TFLite \u00b7 offline",
+      "island": "ML scanning\u2026",
+      "islandDetail": "TFLite inference \u00b7 Hive offline store",
+      "description": "Machine learning-powered capture with TFLite, plus Hive for offline-first workflows that work when the network drops.",
+      "points": [
+        "TFLite models",
+        "Hive offline DB",
+        "Offline-first UX"
+      ]
     },
     {
       "id": "ship",
-      "title": "Ship & maintain",
+      "title": "Ship & integrate",
       "subtitle": "Flutter + native bridges",
       "island": "Build success",
-      "islandDetail": "Flutter ↔ Swift plugin bridge ready",
-      "description": "When Flutter isn’t enough, I drop to native Swift — and wire it back with platform channels / plugins.",
-      "points": ["Method channels", "Native modules", "Release engineering"]
+      "islandDetail": "Firebase \u00b7 GraphQL \u00b7 Push \u00b7 Auth",
+      "description": "End-to-end delivery with Firebase, GraphQL, push notifications, Apple/Google Sign-In, deep linking, and release to App Store & Play Store.",
+      "points": [
+        "Firebase integrations",
+        "GraphQL clients",
+        "Store releases"
+      ]
     }
   ],
   "experience": [
     {
-      "id": "automotive-tech",
-      "company": "Automotive Tech Partner",
-      "role": "Senior Flutter / Mobile Engineer",
-      "location": "Remote",
-      "start": "Jan 2024",
+      "id": "digi-doodle",
+      "company": "The Whole Digi Doodle Software Pvt. Ltd.",
+      "logo": "/companies/digi-doodle.png",
+      "role": "Flutter Developer & iOS Developer",
+      "location": "Jaipur, Rajasthan",
+      "start": "Feb 2026",
       "end": "Present",
-      "duration": "1.5+ yrs",
-      "summary": "Shipped field inspection tooling with native camera pipelines and on-device ML for automotive partners.",
-      "projectSlugs": ["vehicle-inspection"]
+      "duration": "Present",
+      "summary": "Building and shipping Flutter and native iOS apps with a focus on performance and UX \u2014 including ML-powered inspection, camera workflows, and offline Hive storage.",
+      "projectSlugs": [
+        "evolv-solutions"
+      ]
     },
     {
-      "id": "car-events-startup",
-      "company": "Car Events Startup",
-      "role": "Full-Stack Mobile Engineer",
-      "location": "Hybrid",
-      "start": "Mar 2023",
-      "end": "Dec 2023",
-      "duration": "10 mos",
-      "summary": "Built dealership event products across Flutter app and React marketing site on a shared Node API.",
-      "projectSlugs": ["dealership-events", "car-events-platform"]
+      "id": "arthonsys",
+      "company": "Arthonsys Technologies LLP",
+      "logo": "/companies/arthonsys.png",
+      "role": "iOS Developer & Flutter Developer",
+      "location": "Jaipur, Rajasthan",
+      "start": "May 2023",
+      "end": "Oct 2025",
+      "duration": "2 yrs 5 mos",
+      "summary": "Owned app lifecycle from concept to App Store & Play Store. Integrated Firebase, push notifications, Apple Sign-In, and GraphQL across production mobile products.",
+      "projectSlugs": [
+        "daylight",
+        "interpretrain"
+      ]
     },
     {
-      "id": "marketplace-platform",
-      "company": "Marketplace Platform",
-      "role": "Flutter + GraphQL Engineer",
-      "location": "Remote",
-      "start": "Jun 2021",
-      "end": "Feb 2023",
-      "duration": "1 yr 9 mos",
-      "summary": "Owned mobile client and GraphQL API for a scrap marketplace — listings, chat, and order flows.",
-      "projectSlugs": ["scrap-marketplace"]
+      "id": "freelance",
+      "company": "Freelance",
+      "role": "iOS Developer",
+      "location": "Remote / Jaipur",
+      "start": "2023",
+      "end": "Present",
+      "duration": "Ongoing",
+      "summary": "Independent client work \u2014 jewelry management, manufacturing ERP, and medical e-learning apps built end-to-end in Swift / SwiftUI.",
+      "projectSlugs": [
+        "digicat-jewelry",
+        "jewelry-erp",
+        "testpaper-live"
+      ]
+    },
+    {
+      "id": "personal",
+      "company": "Personal Project",
+      "role": "Full-Stack Mobile & Web",
+      "location": "Jaipur, Rajasthan",
+      "start": "2023",
+      "end": "Present",
+      "duration": "Ongoing",
+      "summary": "Personal products built end-to-end \u2014 Indopin and Raddiwalla with Flutter apps for iOS & Android plus React websites.",
+      "projectSlugs": [
+        "indopin",
+        "raddiwalla"
+      ]
+    },
+    {
+      "id": "web-code-master",
+      "company": "Web Code Master",
+      "role": "iOS Developer",
+      "location": "Jaipur, Rajasthan",
+      "start": "Oct 2022",
+      "end": "May 2023",
+      "duration": "8 mos",
+      "summary": "Contributed to creative iOS apps with focus on architecture, animations, and UI/UX \u2014 building foundations in Swift under senior guidance.",
+      "projectSlugs": []
     }
   ],
   "projects": [
     {
       "id": 1,
-      "slug": "vehicle-inspection",
-      "companyId": "automotive-tech",
-      "title": "Vehicle Inspection App",
-      "tagline": "Field-ready inspections with native camera + on-device ML",
-      "description": "Mobile inspection workflow with native iOS camera capture, guided photo sequences, and on-device ML for damage detection — built for reliability in the field.",
-      "thumbnail": "/projects/vehicle-inspection.svg",
+      "slug": "evolv-solutions",
+      "companyId": "digi-doodle",
+      "title": "Evolv Solutions",
+      "tagline": "AI vehicle imaging for dealerships — App Store & Play Store",
+      "description": "Professional vehicle photography powered by AI. Capture on the forecourt; Evolv processes backgrounds, spec checks, and publish-ready imagery at scale for car dealers.",
+      "thumbnail": "/projects/evolv-solutions-icon.png",
       "gallery": [
-        "/projects/vehicle-inspection.svg",
+        "/projects/evolv-solutions-icon.png",
         "/projects/vehicle-inspection-flow.svg"
       ],
-      "tech": ["Flutter", "Swift", "AVFoundation", "On-device ML"],
-      "techLogos": ["flutter", "swift", "apple", "tensorflow"],
+      "tech": [
+        "Flutter",
+        "Swift",
+        "Camera",
+        "TFLite",
+        "Hive",
+        "Offline Mode",
+        "Google Sign-In",
+        "Platform Channels"
+      ],
+      "techLogos": [
+        "flutter",
+        "swift",
+        "tensorflow",
+        "firebase"
+      ],
+      "platforms": ["ios", "android"],
+      "links": {
+        "appStore": "https://apps.apple.com/in/app/evolv-solutions/id6764273722",
+        "playStore": "https://play.google.com/store/apps/details?id=com.evolv.solution.app&pcampaignid=web_share",
+        "website": null
+      },
       "live": null,
       "github": "https://github.com",
       "accent": "#ff6b00",
       "overview": {
-        "problem": "Inspectors needed a fast, reliable way to capture structured vehicle photos and flag damage — even with poor connectivity. Generic camera UIs weren't enough; the flow had to be guided and offline-capable.",
+        "problem": "Field inspections needed reliable photo capture and offline workflows \u2014 generic camera UIs and always-online apps don't hold up on-site.",
         "howItWorks": [
-          "Inspector starts a job and follows a step-by-step capture checklist (angles, damage zones, VIN, odometer).",
-          "A native iOS camera module (AVFoundation) handles high-quality capture, focus, flash, and overlays for framing.",
-          "On-device ML scores images for damage hints so the UI can prompt for retakes or extra shots without waiting on a server.",
-          "Results sync when online; locally stored drafts keep work safe if the network drops mid-inspection."
+          "Inspector captures guided vehicle photos through a ML-assisted camera flow.",
+          "TFLite powers on-device image analysis during capture.",
+          "Hive stores inspection data locally so work continues offline.",
+          "Platform channels bridge Flutter UI with native Swift camera capabilities; Google Sign-In handles auth."
         ],
         "whatIDid": [
-          "Built the Flutter app shell: job list, inspection wizard, gallery review, and sync status UI.",
-          "Implemented a Swift/AVFoundation camera plugin for controlled capture and overlays.",
-          "Integrated on-device ML inference for damage detection cues during capture.",
-          "Designed offline-first storage and resilient upload/retry for completed inspections."
+          "Built Flutter + Swift camera and inspection workflows with platform channels.",
+          "Integrated TFLite for ML-powered image processing.",
+          "Implemented Hive offline database and sync-friendly local storage.",
+          "Shipped secure Google Sign-In authentication."
         ],
         "highlights": [
-          "Native camera quality with Flutter UX",
-          "Works offline in the field",
-          "Guided capture reduces incomplete jobs"
+          "ML-powered camera capture",
+          "Offline-first with Hive",
+          "Native platform channel bridge"
         ]
-      }
+      },
+      "platforms": [
+        "ios",
+        "android"
+      ]
     },
     {
       "id": 2,
-      "slug": "dealership-events",
-      "companyId": "car-events-startup",
-      "title": "Dealership Events App & Website",
-      "tagline": "Events, RSVPs, and attendee engagement for dealerships",
-      "description": "Event discovery and registration experience for car dealerships — companion mobile app plus a marketing website for schedules, RSVPs, and attendee engagement.",
+      "slug": "indopin",
+      "companyId": "personal",
+      "title": "Indopin",
+      "tagline": "Personal product \u2014 iOS, Android & React website",
+      "description": "Personal project: business management across Flutter (iOS & Android) and a React website \u2014 real-time billing, inventory tracking, and vendor communication.",
       "thumbnail": "/projects/dealership-events.svg",
       "gallery": [
         "/projects/dealership-events.svg",
         "/projects/dealership-events-web.svg"
       ],
-      "tech": ["Flutter", "React", "Node.js"],
-      "techLogos": ["flutter", "react", "nodedotjs"],
+      "tech": [
+        "Flutter",
+        "React",
+        "Node.js",
+        "GraphQL",
+        "Firebase",
+        "WebSocket",
+        "Push Notifications"
+      ],
+      "techLogos": [
+        "flutter",
+        "react",
+        "nodedotjs",
+        "graphql",
+        "firebase"
+      ],
+      "links": {
+        "appStore": null,
+        "playStore": null,
+        "website": null
+      },
       "live": null,
       "github": "https://github.com",
       "accent": "#ff8c1a",
       "overview": {
-        "problem": "Dealerships ran launches and customer events with scattered spreadsheets and static landing pages. They needed one place for schedules, RSVPs, and day-of engagement.",
+        "problem": "I wanted a full business stack I owned end-to-end \u2014 billing, inventory, and vendors on phone and web, not three separate tools.",
         "howItWorks": [
-          "Marketing site promotes upcoming events and collects interest / RSVPs.",
-          "Flutter app lets staff and guests browse the schedule, register, and check in.",
-          "Node.js API stores events, attendees, and registration state shared by web + mobile.",
-          "Push / in-app updates keep attendees informed when times or locations change."
+          "Flutter apps for iOS and Android handle day-to-day billing and inventory.",
+          "React website covers the same business flows on web.",
+          "Node.js + GraphQL API and WebSocket keep mobile and web in sync.",
+          "Firebase and push notifications surface real-time updates."
         ],
         "whatIDid": [
-          "Shipped the Flutter companion app for event discovery, RSVP, and check-in.",
-          "Built the marketing/events website in React for SEO-friendly promotion pages.",
-          "Implemented Node.js backend endpoints for events, attendees, and registrations.",
-          "Connected web and mobile to the same API so data stayed in sync."
+          "Designed and built the full personal product stack alone.",
+          "Shipped Flutter clients for both iOS and Android.",
+          "Built the React website for web operators.",
+          "Implemented Node.js / GraphQL, WebSocket, Firebase, and push."
         ],
         "highlights": [
-          "Shared backend for web + mobile",
-          "RSVP and check-in in one flow",
-          "Dealership-ready branding surfaces"
+          "Personal end-to-end product",
+          "Flutter iOS + Android",
+          "React website + GraphQL API"
         ]
-      }
+      },
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ]
     },
     {
-      "id": 3,
-      "slug": "car-events-platform",
-      "companyId": "car-events-startup",
-      "title": "Car Events Platform",
-      "tagline": "Enthusiast-first events with live updates",
-      "description": "Cross-platform Flutter app for browsing, joining, and managing automotive events with real-time updates and a clean, enthusiast-first UI.",
-      "thumbnail": "/projects/car-events.svg",
-      "gallery": [
-        "/projects/car-events.svg",
-        "/projects/car-events-map.svg"
-      ],
-      "tech": ["Flutter", "Firebase"],
-      "techLogos": ["flutter", "firebase"],
-      "live": null,
-      "github": "https://github.com",
-      "accent": "#ff6b00",
-      "overview": {
-        "problem": "Car enthusiasts struggled to discover meets and track changes. Organizers needed a lightweight way to publish events and talk to attendees in real time.",
-        "howItWorks": [
-          "Users browse upcoming meets by date, location, and interest tags.",
-          "Organizers create and manage events from the same app.",
-          "Firebase powers auth, event documents, and live listeners for schedule changes.",
-          "Attendees join events and see live updates without refreshing."
-        ],
-        "whatIDid": [
-          "Designed and built the full Flutter UI for discovery, detail, and organizer tools.",
-          "Modeled Firebase collections for events, RSVPs, and profiles.",
-          "Wired real-time listeners so RSVPs and schedule edits update instantly.",
-          "Polished map/list views and empty states for a clean enthusiast feel."
-        ],
-        "highlights": [
-          "Real-time Firebase updates",
-          "Organizer + attendee modes",
-          "Cross-platform Flutter client"
-        ]
-      }
-    },
-    {
-      "id": 4,
-      "slug": "scrap-marketplace",
-      "companyId": "marketplace-platform",
-      "title": "Scrap Marketplace",
-      "tagline": "Buy & sell scrap with GraphQL-backed flows",
-      "description": "Marketplace for buying and selling scrap materials — Flutter client backed by a Node.js + GraphQL API for listings, chat, and order flows.",
+      "id": 8,
+      "slug": "raddiwalla",
+      "companyId": "personal",
+      "title": "Raddiwalla",
+      "tagline": "Personal product \u2014 scrap marketplace for iOS, Android & web",
+      "description": "Personal project: Raddiwalla connects scrap buyers and sellers \u2014 Flutter apps for iOS & Android plus a React website for listings, orders, and day-to-day trading.",
       "thumbnail": "/projects/scrap-marketplace.svg",
       "gallery": [
         "/projects/scrap-marketplace.svg",
         "/projects/scrap-marketplace-flow.svg"
       ],
-      "tech": ["Flutter", "Node.js", "GraphQL"],
-      "techLogos": ["flutter", "nodedotjs", "graphql"],
+      "tech": [
+        "Flutter",
+        "React",
+        "Node.js",
+        "GraphQL",
+        "Firebase",
+        "Push Notifications"
+      ],
+      "techLogos": [
+        "flutter",
+        "react",
+        "nodedotjs",
+        "graphql",
+        "firebase"
+      ],
+      "links": {
+        "appStore": null,
+        "playStore": null,
+        "website": null
+      },
       "live": null,
       "github": "https://github.com",
       "accent": "#e65c00",
       "overview": {
-        "problem": "Scrap buyers and sellers needed listings, chat, and order tracking in one app — not fragmented WhatsApp threads and spreadsheets.",
+        "problem": "Scrap trade still runs on calls and WhatsApp \u2014 buyers and sellers needed one place for listings, rates, and orders on mobile and web.",
         "howItWorks": [
-          "Sellers create listings with photos, material type, weight/price, and location.",
-          "Buyers search/filter and open chats to negotiate.",
-          "GraphQL API serves listings, users, conversations, and order status to the Flutter client.",
-          "Orders move through simple states (inquiry → confirmed → completed) with notification hooks."
+          "Flutter apps on iOS and Android let users browse rates, post scrap, and manage pickups.",
+          "React website covers the same marketplace flows for desktop operators.",
+          "Shared backend (Node.js / GraphQL + Firebase) keeps mobile and web in sync.",
+          "Push notifications alert users when listings, orders, or rates change."
         ],
         "whatIDid": [
-          "Built the Flutter marketplace UI: browse, listing detail, chat, and order history.",
-          "Designed and implemented the Node.js + GraphQL schema and resolvers.",
-          "Added auth, listing CRUD, messaging, and order state transitions.",
-          "Optimized list queries and image handling for snappy mobile performance."
+          "Designed and built Raddiwalla as a personal end-to-end product.",
+          "Shipped Flutter clients for both Android and iOS.",
+          "Built the React website for web marketplace use.",
+          "Implemented shared API, auth, and notification flows."
         ],
         "highlights": [
-          "End-to-end GraphQL API",
-          "In-app chat + orders",
-          "Production-minded Flutter client"
+          "Personal scrap marketplace",
+          "Flutter Android + iOS",
+          "React website included"
+        ]
+      },
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "daylight",
+      "companyId": "arthonsys",
+      "title": "Daylight",
+      "tagline": "iOS — better energy for your home",
+      "description": "Native iOS app for home energy tracking and upgrades — SwiftUI with secure auth, push notifications, Intercom, GraphQL, and deep linking. iOS only.",
+      "thumbnail": "/projects/daylight-icon.png",
+      "gallery": [
+        "/projects/daylight-icon.png",
+        "/projects/car-events-map.svg"
+      ],
+      "tech": [
+        "SwiftUI",
+        "GraphQL",
+        "Firebase",
+        "Intercom",
+        "Push Notifications",
+        "Apple Sign-In",
+        "Deep Linking"
+      ],
+      "techLogos": [
+        "swift",
+        "graphql",
+        "firebase",
+        "apple"
+      ],
+      "platforms": ["ios"],
+      "links": {
+        "appStore": "https://apps.apple.com/us/app/daylight-app/id6450997694",
+        "playStore": null,
+        "website": null
+      },
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#ff6b00",
+      "overview": {
+        "problem": "Users needed a polished native iOS experience with secure sign-in, notifications, and support \u2014 without janky web wrappers.",
+        "howItWorks": [
+          "SwiftUI screens deliver the primary product experience.",
+          "Apple Sign-In and Firebase secure access.",
+          "GraphQL feeds personalized content; Intercom handles support.",
+          "Push notifications and deep links bring users back to the right screen."
+        ],
+        "whatIDid": [
+          "Built the SwiftUI app with MVVM-friendly structure.",
+          "Integrated Apple Sign-In, Firebase, and GraphQL.",
+          "Wired Intercom, push notifications, and deep linking.",
+          "Focused on personalized UX and App Store\u2013ready polish."
+        ],
+        "highlights": [
+          "SwiftUI native craft",
+          "Apple Sign-In + deep links",
+          "Intercom & push integrated"
         ]
       }
+    },
+    {
+      "id": 4,
+      "slug": "interpretrain",
+      "companyId": "arthonsys",
+      "title": "Interpretrain",
+      "tagline": "iOS — interpreter training with play & record",
+      "description": "Education app for interpreters — dual-channel play & record, cloud practice storage, scoring, and offline training. Native iOS.",
+      "thumbnail": "/projects/interpretrain-icon.png",
+      "gallery": [
+        "/projects/interpretrain-icon.png"
+      ],
+      "tech": [
+        "Storyboard",
+        "Firebase",
+        "SDWebImage",
+        "Push Notifications"
+      ],
+      "techLogos": [
+        "swift",
+        "firebase",
+        "apple"
+      ],
+      "platforms": ["ios"],
+      "links": {
+        "appStore": "https://apps.apple.com/in/app/interpretrain/id1497631411",
+        "playStore": null,
+        "website": null
+      },
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#e65c00",
+      "overview": {
+        "problem": "Learners needed faster content delivery and timely alerts when new material or updates went live.",
+        "howItWorks": [
+          "UIKit Storyboard app presents educational content.",
+          "SDWebImage optimizes media loading for smoother browsing.",
+          "Firebase backs data and messaging.",
+          "Push notifications keep students informed in real time."
+        ],
+        "whatIDid": [
+          "Enhanced the Storyboard iOS client for content delivery.",
+          "Integrated Firebase and push notification flows.",
+          "Optimized image loading with SDWebImage.",
+          "Improved reliability of real-time learner updates."
+        ],
+                        "highlights": [
+          "Optimized content delivery",
+          "Firebase-backed notifications",
+          "Smoother media loading"
+        ]
+      }
+    },
+    {
+      "id": 5,
+      "slug": "digicat-jewelry",
+      "companyId": "freelance",
+      "title": "Digicat Jewelry IT",
+      "tagline": "Freelance \u2014 jewelry management with local storage & media",
+      "description": "Freelance iOS jewelry management app \u2014 Storyboard client with Firebase sync and SDWebImage for catalogs and media-heavy inventory workflows.",
+      "thumbnail": "/projects/dealership-events.svg",
+      "gallery": [
+        "/projects/dealership-events.svg",
+        "/projects/dealership-events-web.svg"
+      ],
+      "tech": [
+        "Storyboard",
+        "Firebase",
+        "SDWebImage"
+      ],
+      "techLogos": [
+        "swift",
+        "firebase",
+        "apple"
+      ],
+      "links": {
+        "appStore": null,
+        "playStore": null,
+        "website": null
+      },
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#ff8c1a",
+      "overview": {
+        "problem": "A jewelry client needed reliable catalog and media handling on iOS \u2014 locally usable and synced when online.",
+        "howItWorks": [
+          "Storyboard iOS app manages jewelry catalog and ops screens.",
+          "Local storage keeps catalogs available without constant network.",
+          "SDWebImage loads and caches product media smoothly.",
+          "Firebase backs sync and remote data for the freelance delivery."
+        ],
+        "whatIDid": [
+          "Delivered the Storyboard jewelry management client as freelance work.",
+          "Implemented local storage for offline-friendly catalogs.",
+          "Integrated Firebase for backend sync.",
+          "Built media pipelines with SDWebImage."
+        ],
+        "highlights": [
+          "Freelance client delivery",
+          "Storyboard + local storage",
+          "Firebase & SDWebImage media"
+        ]
+      },
+      "platforms": [
+        "ios"
+      ]
+    },
+    {
+      "id": 6,
+      "slug": "jewelry-erp",
+      "companyId": "freelance",
+      "title": "Jewelry ERP",
+      "tagline": "Freelance \u2014 production & workflow ERP for manufacturing",
+      "description": "Freelance ERP app for jewelry manufacturing \u2014 production and workflow automation built with SwiftUI, MVVM, and Firebase.",
+      "thumbnail": "/projects/car-events.svg",
+      "gallery": [
+        "/projects/car-events.svg",
+        "/projects/car-events-map.svg"
+      ],
+      "tech": [
+        "SwiftUI",
+        "MVVM",
+        "Firebase"
+      ],
+      "techLogos": [
+        "swift",
+        "firebase",
+        "apple"
+      ],
+      "links": {
+        "appStore": null,
+        "playStore": null,
+        "website": null
+      },
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#ff6b00",
+      "overview": {
+        "problem": "A manufacturing client needed structured production tracking on mobile \u2014 not spreadsheets and missed handoffs.",
+        "howItWorks": [
+          "SwiftUI + MVVM models production and workflow states.",
+          "Firebase stores ERP documents and auth.",
+          "Operators advance manufacturing stages from the phone.",
+          "Delivered as an independent freelance engagement."
+        ],
+        "whatIDid": [
+          "Owned the freelance SwiftUI ERP client end-to-end.",
+          "Applied MVVM for clear production screen architecture.",
+          "Integrated Firebase for data and authentication.",
+          "Focused on manufacturing workflow automation."
+        ],
+        "highlights": [
+          "Freelance ERP delivery",
+          "SwiftUI + MVVM",
+          "Firebase-backed production flows"
+        ]
+      },
+      "platforms": [
+        "ios"
+      ]
+    },
+    {
+      "id": 7,
+      "slug": "testpaper-live",
+      "companyId": "freelance",
+      "title": "Testpaper Live",
+      "tagline": "Freelance \u2014 medical e-learning with video & deep linking",
+      "description": "Freelance e-learning app for medical students \u2014 SwiftUI + MVVM with SDWebImage for content media, video playback, and deep linking into lessons.",
+      "thumbnail": "/projects/scrap-marketplace.svg",
+      "gallery": [
+        "/projects/scrap-marketplace.svg",
+        "/projects/scrap-marketplace-flow.svg"
+      ],
+      "tech": [
+        "SwiftUI",
+        "MVVM",
+        "SDWebImage"
+      ],
+      "techLogos": [
+        "swift",
+        "apple",
+        "firebase"
+      ],
+      "links": {
+        "appStore": null,
+        "playStore": null,
+        "website": null
+      },
+      "live": null,
+      "github": "https://github.com",
+      "accent": "#e65c00",
+      "overview": {
+        "problem": "A medical-education client needed structured lessons and deep links into the right paper \u2014 not a generic video browser.",
+        "howItWorks": [
+          "SwiftUI + MVVM presents courses and test papers.",
+          "SDWebImage handles thumbnails and content media.",
+          "Video playback and deep links open the correct lesson or paper.",
+          "Shipped as freelance work for the education client."
+        ],
+        "whatIDid": [
+          "Built the freelance SwiftUI e-learning client with MVVM.",
+          "Integrated SDWebImage for smooth media loading.",
+          "Delivered video lesson flows and deep linking.",
+          "Focused on medical-student study UX."
+        ],
+        "highlights": [
+          "Freelance education app",
+          "SwiftUI + MVVM",
+          "SDWebImage media pipeline"
+        ]
+      },
+      "platforms": [
+        "ios"
+      ]
     }
   ],
   "testimonials": [
     {
       "id": 1,
-      "quote": "Vinay delivered a rock-solid inspection app that held up in real field conditions. The native camera work and offline ML were exactly what we needed.",
-      "author": "Product Lead",
-      "role": "Automotive Tech Partner"
+      "quote": "Vinay delivered a solid inspection experience with ML camera capture and offline Hive storage \u2014 exactly what field teams needed.",
+      "author": "Product Stakeholder",
+      "role": "Evolv Solutions"
     },
     {
       "id": 2,
-      "quote": "Fast, thoughtful, and great at balancing Flutter speed with native quality where it counts. Our dealership events stack shipped on time and felt premium.",
-      "author": "Founder",
-      "role": "Car Events Startup"
+      "quote": "Strong ownership across Flutter and native iOS. Integrations like Firebase, GraphQL, and push always shipped cleanly.",
+      "author": "Engineering Lead",
+      "role": "Arthonsys Technologies LLP"
     },
     {
       "id": 3,
-      "quote": "Clear communication and excellent GraphQL/API ownership. The marketplace app was smooth for users and maintainable for our team.",
-      "author": "Engineering Manager",
-      "role": "Marketplace Platform"
+      "quote": "Clear communication and reliable freelance delivery \u2014 jewelry and education apps shipped with strong attention to polish.",
+      "author": "Client",
+      "role": "Freelance Projects"
     },
     {
       "id": 4,
-      "quote": "His Swift camera module felt truly native. Clients noticed the polish immediately compared to standard pickers.",
-      "author": "Design Lead",
-      "role": "Inspection Product Team"
+      "quote": "His SwiftUI work on Daylight felt truly native \u2014 auth, deep links, and notifications all worked seamlessly.",
+      "author": "Design Collaborator",
+      "role": "Daylight"
     },
     {
       "id": 5,
-      "quote": "Reliable delivery, clear updates, and strong ownership of both mobile and API layers. Would hire again.",
-      "author": "CTO",
-      "role": "Events Platform"
+      "quote": "Fast learner who improved architecture, animations, and UI quality quickly during early iOS projects.",
+      "author": "Senior Developer",
+      "role": "Web Code Master"
     },
     {
       "id": 6,
-      "quote": "On-device ML worked offline in the field — that alone saved us weeks of backend work and connectivity headaches.",
-      "author": "Operations Manager",
-      "role": "Field Services"
+      "quote": "TFLite + offline workflows saved us connectivity headaches on site. Practical, production-minded engineering.",
+      "author": "Operations Partner",
+      "role": "Field Inspection"
     }
   ]
 }

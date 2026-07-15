@@ -3,22 +3,32 @@ import { motion } from 'framer-motion'
 import { Github, Linkedin, Mail, Send } from 'lucide-react'
 import AnimatedSection from './AnimatedSection'
 import data from '../data.json'
+import { submitContactMessage } from '../lib/contact'
 
 export default function Contact() {
   const [status, setStatus] = useState('idle')
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const form = e.currentTarget
     const formData = new FormData(form)
-    const name = formData.get('name')
-    const email = formData.get('email')
-    const message = formData.get('message')
-    const subject = encodeURIComponent(`Portfolio inquiry from ${name}`)
-    const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`)
-    window.location.href = `mailto:${data.email}?subject=${subject}&body=${body}`
-    setStatus('sent')
-    form.reset()
+    const name = String(formData.get('name') || '').trim()
+    const email = String(formData.get('email') || '').trim()
+    const message = String(formData.get('message') || '').trim()
+
+    setStatus('sending')
+    setError('')
+
+    try {
+      await submitContactMessage({ name, email, message })
+      setStatus('sent')
+      form.reset()
+    } catch (err) {
+      console.error(err)
+      setStatus('idle')
+      setError('Could not send message. Please try again or email directly.')
+    }
   }
 
   const socials = [
@@ -26,6 +36,13 @@ export default function Contact() {
     { href: data.github, icon: Github, label: 'GitHub' },
     { href: data.linkedin, icon: Linkedin, label: 'LinkedIn' },
   ]
+
+  const buttonLabel =
+    status === 'sending'
+      ? 'Sending…'
+      : status === 'sent'
+        ? 'Message sent'
+        : 'Send message'
 
   return (
     <section id="contact" className="relative py-24 md:py-32">
@@ -80,7 +97,8 @@ export default function Contact() {
                     required
                     name="name"
                     type="text"
-                    className="w-full rounded-xl border border-white/10 bg-[#000000]/60 px-4 py-3 text-[#ffffff] outline-none transition focus:border-[#ff6b00]/50"
+                    disabled={status === 'sending'}
+                    className="w-full rounded-xl border border-white/10 bg-[#000000]/60 px-4 py-3 text-[#ffffff] outline-none transition focus:border-[#ff6b00]/50 disabled:opacity-60"
                     placeholder="Your name"
                   />
                 </label>
@@ -90,7 +108,8 @@ export default function Contact() {
                     required
                     name="email"
                     type="email"
-                    className="w-full rounded-xl border border-white/10 bg-[#000000]/60 px-4 py-3 text-[#ffffff] outline-none transition focus:border-[#ff6b00]/50"
+                    disabled={status === 'sending'}
+                    className="w-full rounded-xl border border-white/10 bg-[#000000]/60 px-4 py-3 text-[#ffffff] outline-none transition focus:border-[#ff6b00]/50 disabled:opacity-60"
                     placeholder="you@email.com"
                   />
                 </label>
@@ -101,16 +120,28 @@ export default function Contact() {
                   required
                   name="message"
                   rows={4}
-                  className="w-full resize-none rounded-xl border border-white/10 bg-[#000000]/60 px-4 py-3 text-[#ffffff] outline-none transition focus:border-[#ff6b00]/50"
+                  disabled={status === 'sending'}
+                  className="w-full resize-none rounded-xl border border-white/10 bg-[#000000]/60 px-4 py-3 text-[#ffffff] outline-none transition focus:border-[#ff6b00]/50 disabled:opacity-60"
                   placeholder="Tell me about your project…"
                 />
               </label>
+              {error && (
+                <p className="text-sm text-red-400" role="alert">
+                  {error}
+                </p>
+              )}
+              {status === 'sent' && (
+                <p className="text-sm text-[#ff6b00]">
+                  Thanks — your message was saved. Vinay will get back to you soon.
+                </p>
+              )}
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 rounded-full bg-[#ff6b00] px-6 py-3 text-sm font-semibold text-[#000000] transition hover:bg-[#ff8533]"
+                disabled={status === 'sending'}
+                className="inline-flex items-center gap-2 rounded-full bg-[#ff6b00] px-6 py-3 text-sm font-semibold text-[#000000] transition hover:bg-[#ff8533] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Send size={16} />
-                {status === 'sent' ? 'Opening mail…' : 'Send message'}
+                {buttonLabel}
               </button>
             </form>
           </AnimatedSection>

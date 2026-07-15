@@ -11,6 +11,7 @@ const LOGO_MAP = {
   tensorflow: { slug: 'tensorflow', color: 'FF6F00' },
   react: { slug: 'react', color: '61DAFB' },
   firebase: { slug: 'firebase', color: 'FFCA28' },
+  github: { slug: 'github', color: 'FFFFFF' },
   fastapi: { slug: 'fastapi', color: '009688' },
 }
 

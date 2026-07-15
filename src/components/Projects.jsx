@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import AnimatedSection from './AnimatedSection'
+import ProjectLinks from './ProjectLinks'
 import data from '../data.json'
 
 /**
@@ -68,9 +69,18 @@ export default function Projects() {
                       {exp.start} — {exp.end}
                       <span className="text-[#ff6b00]"> · {exp.duration}</span>
                     </p>
-                    <h3 className="font-display mt-2 text-xl font-bold text-white md:text-2xl">
-                      {exp.company}
-                    </h3>
+                    <div className="mt-2 flex items-center gap-3 md:justify-end">
+                      {exp.logo && (
+                        <img
+                          src={exp.logo}
+                          alt={`${exp.company} logo`}
+                          className="h-10 w-10 shrink-0 rounded-xl border border-white/10 bg-white object-contain p-1 shadow-sm md:h-11 md:w-11"
+                        />
+                      )}
+                      <h3 className="font-display text-xl font-bold text-white md:text-2xl">
+                        {exp.company}
+                      </h3>
+                    </div>
                     <p className="mt-1 text-sm text-[#ff6b00]">{exp.role}</p>
                     <p className="mt-3 text-sm leading-relaxed text-[#a3a3a3] md:ml-auto md:max-w-sm">
                       {exp.summary}
@@ -91,11 +101,11 @@ export default function Projects() {
                         to={`/projects/${project.slug}`}
                         className="group flex gap-3 rounded-xl border border-white/10 bg-[#111111]/80 p-3 transition hover:border-[#ff6b00]/40"
                       >
-                        <div className="h-16 w-20 shrink-0 overflow-hidden rounded-lg bg-black">
+                        <div className="flex h-16 w-20 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-transparent">
                           <img
                             src={project.thumbnail}
                             alt=""
-                            className="h-full w-full object-cover transition duration-400 group-hover:scale-105"
+                            className="h-full w-full object-contain transition duration-400 group-hover:scale-105"
                           />
                         </div>
                         <div className="min-w-0 flex-1 py-0.5">
@@ -111,15 +121,18 @@ export default function Projects() {
                           <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-[#a3a3a3]">
                             {project.tagline || project.description}
                           </p>
-                          <div className="mt-2 flex flex-wrap gap-1">
-                            {(project.tech || []).slice(0, 3).map((t) => (
-                              <span
-                                key={t}
-                                className="rounded bg-white/5 px-1.5 py-0.5 text-[10px] text-[#a3a3a3]"
-                              >
-                                {t}
-                              </span>
-                            ))}
+                          <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
+                            <div className="flex flex-wrap gap-1">
+                              {(project.tech || []).slice(0, 3).map((t) => (
+                                <span
+                                  key={t}
+                                  className="rounded bg-white/5 px-1.5 py-0.5 text-[10px] text-[#a3a3a3]"
+                                >
+                                  {t}
+                                </span>
+                              ))}
+                            </div>
+                            <ProjectLinks project={project} size="sm" />
                           </div>
                         </div>
                       </Link>

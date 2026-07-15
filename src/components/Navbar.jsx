@@ -39,14 +39,9 @@ export default function Navbar({ activeSection }) {
 
   return (
     <header className="pointer-events-none fixed top-0 right-0 left-0 z-50 flex justify-center px-4 pt-4 md:pt-5">
-      {/* Floating circular / pill nav */}
-      <motion.nav
-        initial={false}
-        animate={{
-          width: scrolled || open ? 'min(100%, 720px)' : 'min(100%, 920px)',
-        }}
-        transition={{ type: 'spring', stiffness: 260, damping: 28 }}
-        className={`pointer-events-auto relative flex w-full max-w-[920px] items-center justify-between gap-3 rounded-full px-4 py-2.5 transition-[background,backdrop-filter,border-color,box-shadow] duration-400 md:px-5 md:py-3 ${
+      {/* Floating pill — width follows content */}
+      <nav
+        className={`pointer-events-auto relative inline-flex max-w-[calc(100vw-2rem)] items-center gap-2 rounded-full px-3 py-2 transition-[background,backdrop-filter,border-color,box-shadow] duration-400 md:gap-3 md:px-4 md:py-2.5 ${
           scrolled || open
             ? 'border border-white/15 bg-black/45 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-2xl backdrop-saturate-150'
             : 'border border-transparent bg-transparent'
@@ -60,7 +55,7 @@ export default function Navbar({ activeSection }) {
           <NameHover text={data.name} className="text-base font-bold md:text-lg" />
         </a>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-0.5 md:flex">
           {links.map((link) => {
             const id = link.href.slice(1)
             const isActive = activeSection === id
@@ -69,7 +64,7 @@ export default function Navbar({ activeSection }) {
                 <a
                   href={link.href}
                   onClick={(e) => handleNav(e, link.href)}
-                  className={`relative rounded-full px-3.5 py-1.5 text-sm font-medium transition ${
+                  className={`relative rounded-full px-3 py-1.5 text-sm font-medium whitespace-nowrap transition ${
                     isActive
                       ? 'bg-white/10 text-[#ffffff]'
                       : 'text-[#a3a3a3] hover:bg-white/5 hover:text-[#ffffff]'
@@ -89,28 +84,26 @@ export default function Navbar({ activeSection }) {
           })}
         </ul>
 
-        <div className="flex items-center gap-2">
-          <a
-            href="#contact"
-            onClick={(e) => handleNav(e, '#contact')}
-            className="hidden rounded-full bg-[#ff6b00] px-4 py-2 text-sm font-semibold text-[#000000] transition hover:bg-[#ff8533] md:inline-flex"
-          >
-            Let&apos;s talk
-          </a>
+        <a
+          href="#contact"
+          onClick={(e) => handleNav(e, '#contact')}
+          className="hidden shrink-0 rounded-full bg-[#ff6b00] px-4 py-2 text-sm font-semibold whitespace-nowrap text-[#000000] transition hover:bg-[#ff8533] md:inline-flex"
+        >
+          Let&apos;s talk
+        </a>
 
-          <button
-            type="button"
-            className={`flex h-10 w-10 items-center justify-center rounded-full text-[#ffffff] transition md:hidden ${
-              scrolled || open ? 'bg-white/10' : 'bg-white/5'
-            }`}
-            aria-label={open ? 'Close menu' : 'Open menu'}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? <X size={18} /> : <Menu size={18} />}
-          </button>
-        </div>
+        <button
+          type="button"
+          className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-[#ffffff] transition md:hidden ${
+            scrolled || open ? 'bg-white/10' : 'bg-white/5'
+          }`}
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? <X size={18} /> : <Menu size={18} />}
+        </button>
 
-        {/* Mobile dropdown — also circular/glass */}
+        {/* Mobile dropdown */}
         <AnimatePresence>
           {open && (
             <motion.div
@@ -118,7 +111,7 @@ export default function Navbar({ activeSection }) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}
               transition={{ duration: 0.22 }}
-              className="absolute top-[calc(100%+10px)] left-0 right-0 overflow-hidden rounded-[1.75rem] border border-white/15 bg-black/55 p-4 shadow-[0_16px_48px_rgba(0,0,0,0.5)] backdrop-blur-2xl md:hidden"
+              className="absolute top-[calc(100%+10px)] left-1/2 w-[min(calc(100vw-2rem),20rem)] -translate-x-1/2 overflow-hidden rounded-[1.75rem] border border-white/15 bg-black/55 p-4 shadow-[0_16px_48px_rgba(0,0,0,0.5)] backdrop-blur-2xl md:hidden"
             >
               <ul className="flex flex-col gap-1">
                 {links.map((link) => (
@@ -149,7 +142,7 @@ export default function Navbar({ activeSection }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </motion.nav>
+      </nav>
     </header>
   )
 }

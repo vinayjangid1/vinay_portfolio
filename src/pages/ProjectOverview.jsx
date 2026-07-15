@@ -1,8 +1,9 @@
 import { useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, CheckCircle2, ExternalLink, Github } from 'lucide-react'
+import { ArrowLeft, CheckCircle2, Github } from 'lucide-react'
 import TechLogo from '../components/TechLogo'
+import ProjectLinks from '../components/ProjectLinks'
 import ResumeFAB from '../components/ResumeFAB'
 import SEO from '../components/SEO'
 import data from '../data.json'
@@ -87,7 +88,8 @@ export default function ProjectOverview() {
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <ProjectLinks project={project} size="lg" />
               {project.github && (
                 <a
                   href={project.github}
@@ -97,17 +99,6 @@ export default function ProjectOverview() {
                 >
                   <Github size={16} />
                   GitHub
-                </a>
-              )}
-              {project.live && (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#ff6b00] px-5 py-2.5 text-sm font-semibold text-[#000000] transition hover:bg-[#ff8533]"
-                >
-                  <ExternalLink size={16} />
-                  Live demo
                 </a>
               )}
               <Link
@@ -136,7 +127,7 @@ export default function ProjectOverview() {
               (src, i) => (
                 <div
                   key={src}
-                  className={`overflow-hidden rounded-2xl border border-white/10 bg-[#111111] ${
+                  className={`flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-transparent p-4 ${
                     i === 0 && (project.gallery?.length || 1) === 1
                       ? 'md:col-span-2'
                       : ''
@@ -145,7 +136,7 @@ export default function ProjectOverview() {
                   <img
                     src={src}
                     alt={`${project.title} screenshot ${i + 1}`}
-                    className="aspect-[16/10] w-full object-cover"
+                    className="max-h-72 w-full object-contain md:max-h-96"
                   />
                 </div>
               )

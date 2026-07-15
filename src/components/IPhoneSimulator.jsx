@@ -1,14 +1,13 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import {
-  Camera,
   CheckCircle2,
-  Cpu,
   Signal,
   BatteryFull,
   Wifi,
   Aperture,
-  Sparkles,
+  Gauge,
+  Layers,
 } from 'lucide-react'
 
 /**
@@ -34,8 +33,6 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
     }
   }
 
-  const screen = demo?.id || 'native-home'
-
   return (
     <div className="relative mx-auto w-[min(100%,290px)] select-none sm:w-[310px]">
       <div
@@ -43,9 +40,7 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
         className="pointer-events-none absolute -inset-10 rounded-[3rem] bg-[#ff6b00]/10 blur-3xl"
       />
 
-      {/* Phone shell — matches cropped copper frame asset */}
       <div className="relative aspect-[218/439] w-full">
-        {/* Screen content (behind frame, shows through transparent glass) */}
         <div
           className="absolute overflow-hidden bg-[#050505]"
           style={{
@@ -56,7 +51,6 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
             borderRadius: '13% / 6%',
           }}
         >
-          {/* Status bar */}
           <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-[7%] pt-[3.2%] text-[10px] font-semibold text-white sm:text-[11px]">
             <span>9:41</span>
             <div className="flex items-center gap-1 opacity-90">
@@ -66,7 +60,6 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
             </div>
           </div>
 
-          {/* App screens */}
           <div className="absolute inset-0 z-10 pt-[12%] pb-[6%]">
             <AnimatePresence mode="wait">
               <motion.div
@@ -82,11 +75,9 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
             </AnimatePresence>
           </div>
 
-          {/* Home indicator */}
           <div className="absolute bottom-[2%] left-1/2 z-20 h-[3px] w-[32%] -translate-x-1/2 rounded-full bg-white/45" />
         </div>
 
-        {/* Frame image on top */}
         <img
           src="/iphone-frame.png"
           alt=""
@@ -95,7 +86,6 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
           draggable={false}
         />
 
-        {/* Interactive Dynamic Island — sits over the frame’s island */}
         <div
           className="absolute left-1/2 z-40 -translate-x-1/2"
           style={{ top: '3.6%' }}
@@ -118,32 +108,18 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
             <AnimatePresence mode="wait">
               {islandOpen ? (
                 <motion.div
-                  key="expanded"
+                  key="open"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-                  className="flex h-full items-center gap-2.5 px-3"
+                  className="flex h-full flex-col justify-center px-3.5 py-2"
                 >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#ff6b00]/20 text-[#ff6b00]">
-                    {screen === 'camera' ? (
-                      <Camera size={16} />
-                    ) : screen === 'ml' ? (
-                      <Cpu size={16} />
-                    ) : screen === 'ship' ? (
-                      <CheckCircle2 size={16} />
-                    ) : (
-                      <Sparkles size={16} />
-                    )}
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-[10px] font-semibold sm:text-[11px]">
-                      {demo?.island || 'iOS Native'}
-                    </p>
-                    <p className="truncate text-[8px] text-white/55 sm:text-[9px]">
-                      {demo?.islandDetail}
-                    </p>
-                  </div>
-                  <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-[#ff6b00]" />
+                  <p className="text-[10px] font-semibold text-white">
+                    {demo?.island || 'iOS'}
+                  </p>
+                  <p className="mt-0.5 truncate text-[9px] text-white/55">
+                    {demo?.islandDetail || 'Native Swift'}
+                  </p>
                 </motion.div>
               ) : islandMode === 'compact' ? (
                 <motion.div
@@ -184,7 +160,7 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
         ))}
       </div>
       <p className="mt-2 text-center text-[10px] tracking-wider text-[#a3a3a3] uppercase">
-        Tap Dynamic Island · Scroll to change demos
+        Scroll locked · tap Dynamic Island
       </p>
     </div>
   )
@@ -193,118 +169,121 @@ export default function IPhoneSimulator({ demo, demos = [], activeIndex = 0 }) {
 function PhoneScreen({ demo }) {
   const id = demo?.id
 
-  if (id === 'camera') {
+  if (id === 'scroll') {
     return (
       <div className="flex h-full flex-col">
         <p className="text-[10px] font-medium tracking-widest text-[#ff6b00] uppercase">
-          AVFoundation
+          Scroll performance
         </p>
         <h4 className="mt-1 text-base font-bold text-white sm:text-lg">
           {demo.title}
         </h4>
-        <div className="relative mt-3 flex-1 overflow-hidden rounded-2xl border border-white/10 bg-[#111]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,#2a2a2a,transparent_55%)]" />
-          <div className="absolute inset-5 rounded-xl border border-dashed border-[#ff6b00]/50" />
-          <div className="absolute top-2.5 left-2.5 rounded-full bg-red-500/90 px-2 py-0.5 text-[8px] font-bold text-white">
-            ● REC
-          </div>
-          <div className="absolute right-2.5 bottom-2.5 left-2.5 flex justify-between text-[8px] text-white/70">
-            <span>1x</span>
-            <span>ISO 200</span>
-            <span>AF lock</span>
-          </div>
-          <div className="absolute bottom-9 left-1/2 h-10 w-10 -translate-x-1/2 rounded-full border-2 border-white bg-white/20" />
-        </div>
-        <p className="mt-2 text-[10px] leading-relaxed text-white/55">
-          Guided capture · flash · focus · overlays
-        </p>
-      </div>
-    )
-  }
-
-  if (id === 'ml') {
-    return (
-      <div className="flex h-full flex-col">
-        <p className="text-[10px] font-medium tracking-widest text-[#ff6b00] uppercase">
-          Core ML
-        </p>
-        <h4 className="mt-1 text-base font-bold text-white sm:text-lg">
-          {demo.title}
-        </h4>
-        <div className="mt-3 space-y-2">
-          {['Panel damage', 'Scratch detected', 'Confidence 92%'].map(
-            (row, i) => (
-              <div
-                key={row}
-                className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-2.5 py-2"
-              >
-                <span className="text-[11px] text-white/80">{row}</span>
-                <motion.span
-                  className="h-1.5 rounded-full bg-[#ff6b00]"
-                  initial={{ width: 0 }}
-                  animate={{ width: 36 + i * 16 }}
-                  transition={{ delay: 0.15 * i, duration: 0.6 }}
-                />
+        <div className="mt-3 flex-1 space-y-1.5 overflow-hidden">
+          {Array.from({ length: 6 }).map((_, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: 8 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.05 }}
+              className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-2.5 py-2"
+            >
+              <span className="h-7 w-7 shrink-0 rounded-lg bg-[#ff6b00]/25" />
+              <div className="min-w-0 flex-1">
+                <div className="h-1.5 w-[70%] rounded bg-white/30" />
+                <div className="mt-1.5 h-1 w-[45%] rounded bg-white/15" />
               </div>
-            )
-          )}
+            </motion.div>
+          ))}
         </div>
-        <div className="mt-auto rounded-xl border border-[#ff6b00]/30 bg-[#ff6b00]/10 p-2.5">
-          <p className="text-[10px] text-[#ff6b00]">On-device · offline ready</p>
-        </div>
+        <p className="mt-2 text-[9px] text-white/50">Reuse · prefetch · 120Hz ready</p>
       </div>
     )
   }
 
-  if (id === 'ship') {
+  if (id === 'animation') {
     return (
       <div className="flex h-full flex-col">
         <p className="text-[10px] font-medium tracking-widest text-[#ff6b00] uppercase">
-          Bridge
+          Core Animation
         </p>
         <h4 className="mt-1 text-base font-bold text-white sm:text-lg">
           {demo.title}
         </h4>
-        <div className="mt-4 space-y-2.5 font-mono text-[9px] text-white/70 sm:text-[10px]">
-          <p className="text-emerald-400">✓ Flutter build succeeded</p>
-          <p className="text-emerald-400">✓ Swift plugin linked</p>
-          <p className="text-emerald-400">✓ MethodChannel ready</p>
-          <p className="text-white/40">$ arch -arm64 flutter run</p>
+        <div className="relative mt-4 flex flex-1 items-center justify-center">
+          <motion.div
+            className="absolute h-24 w-24 rounded-3xl border border-[#ff6b00]/40 bg-[#ff6b00]/15"
+            animate={{ scale: [1, 1.08, 1], rotate: [0, 4, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute h-16 w-16 rounded-2xl bg-[#ff6b00]"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
+        <p className="mt-2 text-[9px] text-white/50">
+          Interruptible springs · matched curves
+        </p>
+      </div>
+    )
+  }
+
+  if (id === 'polish') {
+    return (
+      <div className="flex h-full flex-col">
+        <p className="text-[10px] font-medium tracking-widest text-[#ff6b00] uppercase">
+          Release quality
+        </p>
+        <h4 className="mt-1 text-base font-bold text-white sm:text-lg">
+          {demo.title}
+        </h4>
+        <div className="mt-4 space-y-2 font-mono text-[9px] text-white/70 sm:text-[10px]">
+          <p className="text-emerald-400">✓ Memory graph clean</p>
+          <p className="text-emerald-400">✓ Main thread &lt; 16ms</p>
+          <p className="text-emerald-400">✓ Accessibility pass</p>
+          <p className="text-white/40">$ xcodebuild archive</p>
         </div>
         <div className="mt-auto flex items-center gap-2 rounded-xl bg-white/5 p-2.5">
           <CheckCircle2 className="text-[#ff6b00]" size={16} />
-          <span className="text-[11px] text-white/80">Native module shipped</span>
+          <span className="text-[11px] text-white/80">TestFlight → App Store</span>
         </div>
       </div>
     )
   }
 
+  // performance (default)
   return (
     <div className="flex h-full flex-col">
       <p className="text-[10px] font-medium tracking-widest text-[#ff6b00] uppercase">
         iOS Native
       </p>
       <h4 className="mt-1 text-lg font-bold text-white sm:text-xl">
-        {demo?.title || 'Swift developer'}
+        {demo?.title || 'Native performance'}
       </h4>
       <p className="mt-1.5 text-[11px] leading-relaxed text-white/55">
         {demo?.subtitle}
       </p>
       <div className="mt-4 grid grid-cols-2 gap-2">
-        {['Swift', 'SwiftUI', 'AVFoundation', 'Core ML'].map((t) => (
+        {[
+          { icon: Gauge, label: '60fps' },
+          { icon: Layers, label: 'SwiftUI' },
+          { icon: Aperture, label: 'UIKit' },
+          { icon: CheckCircle2, label: 'Instruments' },
+        ].map(({ icon: Icon, label }) => (
           <div
-            key={t}
-            className="rounded-2xl border border-white/10 bg-white/5 px-2 py-3 text-center text-[10px] font-medium text-white/85 sm:text-[11px]"
+            key={label}
+            className="flex flex-col items-center gap-1.5 rounded-2xl border border-white/10 bg-white/5 px-2 py-3 text-center"
           >
-            {t}
+            <Icon size={14} className="text-[#ff6b00]" />
+            <span className="text-[10px] font-medium text-white/85">{label}</span>
           </div>
         ))}
       </div>
       <div className="mt-auto rounded-2xl bg-gradient-to-br from-[#ff6b00]/25 to-transparent p-3">
-        <p className="text-[11px] font-semibold text-white">
-          Native when it matters
+        <p className="text-[11px] font-semibold text-white">Performance you can feel</p>
+        <p className="mt-1 text-[9px] text-white/55">
+          Scroll · animation · Main Thread
         </p>
-        <p className="mt-1 text-[9px] text-white/55">Camera · ML · performance</p>
       </div>
     </div>
   )

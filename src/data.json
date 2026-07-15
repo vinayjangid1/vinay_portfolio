@@ -157,55 +157,55 @@
   ],
   "iosDemos": [
     {
-      "id": "native-home",
-      "title": "Native iOS craft",
-      "subtitle": "Swift \u00b7 SwiftUI / UIKit",
-      "island": "Vinay \u00b7 iOS",
-      "islandDetail": "Native Swift & Flutter developer \u00b7 Jaipur",
-      "description": "I build and ship production iOS apps with Swift and SwiftUI \u2014 clean architecture (MVVM/MVC), smooth animations, and App Store polish.",
+      "id": "performance",
+      "title": "Native performance",
+      "subtitle": "60fps \u00b7 Instruments \u00b7 Real devices",
+      "island": "60 FPS",
+      "islandDetail": "UIKit / SwiftUI \u00b7 zero jank scroll",
+      "description": "I ship iOS apps that feel native because they are \u2014 Swift and SwiftUI with careful layout, draw calls, and Main Thread work kept off the critical path so lists and transitions stay smooth.",
       "points": [
-        "Swift & SwiftUI",
-        "MVVM / MVC",
-        "App Store delivery"
+        "60fps UI",
+        "Main-thread hygiene",
+        "Instruments profiling"
       ]
     },
     {
-      "id": "camera",
-      "title": "Camera & capture",
-      "subtitle": "Field-ready pipelines",
-      "island": "Camera live",
-      "islandDetail": "Camera \u00b7 OCR \u00b7 PDF \u00b7 image workflows",
-      "description": "Custom camera and document-scanner flows \u2014 OCR, PDF generation, image resizing, and platform-channel bridges between Flutter and native Swift.",
+      "id": "scroll",
+      "title": "Scroll that stays smooth",
+      "subtitle": "UICollectionView \u00b7 Lazy stacks \u00b7 Cell reuse",
+      "island": "Scroll lock",
+      "islandDetail": "Reusable cells \u00b7 prefetch \u00b7 no hitch",
+      "description": "Long lists and complex cells stay buttery with proper reuse, prefetching, and image decoding off the main thread \u2014 the difference users feel every flick of the thumb.",
       "points": [
-        "Camera integration",
-        "OCR & PDF",
-        "Platform channels"
+        "Cell reuse",
+        "Prefetching",
+        "Off-main decode"
       ]
     },
     {
-      "id": "ml",
-      "title": "On-device ML",
-      "subtitle": "TFLite \u00b7 offline",
-      "island": "ML scanning\u2026",
-      "islandDetail": "TFLite inference \u00b7 Hive offline store",
-      "description": "Machine learning-powered capture with TFLite, plus Hive for offline-first workflows that work when the network drops.",
+      "id": "animation",
+      "title": "Native motion",
+      "subtitle": "Core Animation \u00b7 UIViewPropertyAnimator",
+      "island": "Anim \u00b7 live",
+      "islandDetail": "Interruptible \u00b7 spring \u00b7 matched curves",
+      "description": "System-aware animations, interactive transitions, and Dynamic Island\u2013ready moments. Motion that tracks the finger and never fights the OS.",
       "points": [
-        "TFLite models",
-        "Hive offline DB",
-        "Offline-first UX"
+        "Core Animation",
+        "Interactive transitions",
+        "Haptics"
       ]
     },
     {
-      "id": "ship",
-      "title": "Ship & integrate",
-      "subtitle": "Flutter + native bridges",
-      "island": "Build success",
-      "islandDetail": "Firebase \u00b7 GraphQL \u00b7 Push \u00b7 Auth",
-      "description": "End-to-end delivery with Firebase, GraphQL, push notifications, Apple/Google Sign-In, deep linking, and release to App Store & Play Store.",
+      "id": "polish",
+      "title": "App Store\u2013ready craft",
+      "subtitle": "Architecture \u00b7 Memory \u00b7 Release quality",
+      "island": "Ship ready",
+      "islandDetail": "MVVM \u00b7 leaks checked \u00b7 TestFlight polish",
+      "description": "Clean Swift architecture, memory discipline, and release engineering so native modules stay fast after months of shipping \u2014 not just on day one.",
       "points": [
-        "Firebase integrations",
-        "GraphQL clients",
-        "Store releases"
+        "MVVM / clean layers",
+        "Memory safety",
+        "TestFlight \u2192 App Store"
       ]
     }
   ],

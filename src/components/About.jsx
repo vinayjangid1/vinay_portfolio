@@ -1,44 +1,31 @@
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useRef, useState } from 'react'
 import AnimatedSection from './AnimatedSection'
-import TechLogo from './TechLogo'
+import SkillsGlobe from './SkillsGlobe'
 import data from '../data.json'
-
-function SkillBar({ skill, delay }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, amount: 0.6 })
-
-  return (
-    <div ref={ref} className="space-y-2">
-      <div className="flex items-center justify-between gap-3 text-sm">
-        <span className="flex items-center gap-2.5 font-medium text-[#ffffff]">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 p-1.5">
-            <TechLogo logo={skill.logo} name={skill.name} size={18} />
-          </span>
-          {skill.name}
-        </span>
-        <span className="tabular-nums text-[#a3a3a3]">{skill.level}%</span>
-      </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/5">
-        <motion.div
-          className="h-full rounded-full bg-[#ff6b00]"
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
-          transition={{ duration: 1, delay, ease: [0.22, 1, 0.36, 1] }}
-        />
-      </div>
-    </div>
-  )
-}
 
 export default function About() {
   const sectionRef = useRef(null)
+  const [globeSize, setGlobeSize] = useState(420)
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
   })
   const imgY = useTransform(scrollYProgress, [0, 1], [60, -60])
   const imgScale = useTransform(scrollYProgress, [0, 0.5, 1], [0.96, 1, 0.98])
+
+  useEffect(() => {
+    const update = () => {
+      const w = window.innerWidth
+      if (w < 480) setGlobeSize(300)
+      else if (w < 768) setGlobeSize(360)
+      else if (w < 1024) setGlobeSize(400)
+      else setGlobeSize(460)
+    }
+    update()
+    window.addEventListener('resize', update)
+    return () => window.removeEventListener('resize', update)
+  }, [])
 
   return (
     <section id="about" ref={sectionRef} className="relative py-24 md:py-32">
@@ -69,37 +56,28 @@ export default function About() {
             </motion.div>
           </AnimatedSection>
 
-          <div className="space-y-10">
-            <AnimatedSection delay={0.15}>
-              <p className="text-lg leading-relaxed text-[#a3a3a3]">{data.bio}</p>
-            </AnimatedSection>
+          <AnimatedSection delay={0.15}>
+            <p className="text-lg leading-relaxed text-[#a3a3a3]">{data.bio}</p>
+          </AnimatedSection>
+        </div>
 
-            <AnimatedSection delay={0.2}>
-              <p className="mb-3 text-xs font-medium tracking-widest text-[#a3a3a3] uppercase">
-                Tech stack
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {data.techStack.map((tech) => (
-                  <span
-                    key={tech.name}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-[#e5e5e5]"
-                  >
-                    <TechLogo logo={tech.logo} name={tech.name} size={14} />
-                    {tech.name}
-                  </span>
-                ))}
-              </div>
-            </AnimatedSection>
+        {/* Skills globe */}
+        <div className="mt-20 md:mt-28">
+          <AnimatedSection>
+            <p className="mb-3 text-center text-sm font-medium tracking-[0.2em] text-[#ff6b00] uppercase">
+              Skills
+            </p>
+            <h3 className="font-display text-center text-2xl font-bold tracking-tight text-[#ffffff] sm:text-3xl md:text-4xl">
+              A world of technologies.
+            </h3>
+            <p className="mx-auto mt-3 max-w-md text-center text-sm text-[#a3a3a3]">
+              Drag the globe to explore — Flutter, iOS, full stack, and more.
+            </p>
+          </AnimatedSection>
 
-            <AnimatedSection delay={0.25} className="space-y-5">
-              <p className="text-xs font-medium tracking-widest text-[#a3a3a3] uppercase">
-                Skills
-              </p>
-              {data.skills.map((skill, i) => (
-                <SkillBar key={skill.name} skill={skill} delay={0.08 * i} />
-              ))}
-            </AnimatedSection>
-          </div>
+          <AnimatedSection delay={0.1} className="mt-8 flex justify-center md:mt-12">
+            <SkillsGlobe size={globeSize} />
+          </AnimatedSection>
         </div>
       </div>
     </section>

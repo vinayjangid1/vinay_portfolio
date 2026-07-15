@@ -286,23 +286,24 @@
       "slug": "evolv-solutions",
       "companyId": "digi-doodle",
       "title": "Evolv Solutions",
-      "tagline": "AI vehicle imaging for dealerships \u2014 App Store & Play Store",
-      "description": "Professional vehicle photography powered by AI. Capture on the forecourt; Evolv processes backgrounds, spec checks, and publish-ready imagery at scale for car dealers.",
-      "thumbnail": "/projects/evolv-solutions-icon.png",
+      "tagline": "AI vehicle imaging \u2014 native cameras, ML detection & offline Hive",
+      "description": "Professional vehicle photography powered by AI for dealerships. Built with Flutter plus native iOS/Android camera pipelines, on-device ML object detection, Hive local storage, animations, and iOS widgets for quick actions.",
+      "thumbnail": "/projects/evolv-solutions/icon.png",
       "tech": [
         "Flutter",
-        "Swift",
-        "Camera",
-        "TFLite",
+        "Machine Learning",
+        "iOS Native Camera",
+        "Android Native Camera",
+        "Object Detection",
         "Hive",
-        "Offline Mode",
-        "Google Sign-In",
-        "Platform Channels"
+        "Animations",
+        "iOS Widgets"
       ],
       "techLogos": [
         "flutter",
-        "swift",
         "tensorflow",
+        "swift",
+        "apple",
         "firebase"
       ],
       "platforms": [
@@ -318,26 +319,36 @@
       "github": "https://github.com",
       "accent": "#ff6b00",
       "overview": {
-        "problem": "Field inspections needed reliable photo capture and offline workflows \u2014 generic camera UIs and always-online apps don't hold up on-site.",
+        "problem": "Dealership teams needed faster, consistent vehicle photography on the forecourt \u2014 without studio shoots, outsourced editing, or unreliable always-online apps.",
         "howItWorks": [
-          "Inspector captures guided vehicle photos through a ML-assisted camera flow.",
-          "TFLite powers on-device image analysis during capture.",
-          "Hive stores inspection data locally so work continues offline.",
-          "Platform channels bridge Flutter UI with native Swift camera capabilities; Google Sign-In handles auth."
+          "Staff capture vehicles through native iOS and Android camera modules bridged into Flutter.",
+          "On-device machine learning and object detection guide framing and image quality during capture.",
+          "Hive keeps jobs and photos available offline until sync is possible.",
+          "Smooth animations polish the capture flow; iOS widgets surface quick actions from the home screen."
         ],
         "whatIDid": [
-          "Built Flutter + Swift camera and inspection workflows with platform channels.",
-          "Integrated TFLite for ML-powered image processing.",
-          "Implemented Hive offline database and sync-friendly local storage.",
-          "Shipped secure Google Sign-In authentication."
+          "Integrated iOS and Android native camera pipelines via platform channels.",
+          "Built machine learning / object detection into the capture experience.",
+          "Implemented Hive local database for offline-first workflows.",
+          "Added animations throughout the product and iOS widgets for quick actions."
         ],
         "highlights": [
-          "ML-powered camera capture",
-          "Offline-first with Hive",
-          "Native platform channel bridge"
+          "Native iOS & Android cameras",
+          "ML + object detection on device",
+          "Hive offline storage",
+          "iOS widgets for quick actions"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/evolv-solutions/screens/evolv_solution_1.webp",
+        "/projects/evolv-solutions/screens/evolv_solution_2.webp",
+        "/projects/evolv-solutions/screens/evolv_solution_3.webp",
+        "/projects/evolv-solutions/screens/evolv_solution_4.webp",
+        "/projects/evolv-solutions/screens/evolv_solution_5.webp",
+        "/projects/evolv-solutions/screens/evolv_solution_6.webp",
+        "/projects/evolv-solutions/screens/evolv_solution_7.webp",
+        "/projects/evolv-solutions/screens/evolv_solutions_8.webp"
+      ]
     },
     {
       "id": 2,
@@ -346,7 +357,7 @@
       "title": "Indopin",
       "tagline": "Personal product \u2014 GST invoicing for iOS, Android & web",
       "description": "Personal project: Indopin Invoice Maker \u2014 create GST invoices, track payments, manage customers, and view business reports. Flutter apps for iOS & Android plus website at indopin.com.",
-      "thumbnail": "/projects/indopin-icon.png",
+      "thumbnail": "/projects/indopin/icon.png",
       "tech": [
         "Flutter",
         "React",
@@ -396,7 +407,16 @@
           "React website + GraphQL API"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/indopin/screens/indopin_1.webp",
+        "/projects/indopin/screens/indopin_2.webp",
+        "/projects/indopin/screens/indopin_3.webp",
+        "/projects/indopin/screens/indopin_4.webp",
+        "/projects/indopin/screens/indopin_5.webp",
+        "/projects/indopin/screens/indopin_6.webp",
+        "/projects/indopin/screens/indopin_7.webp",
+        "/projects/indopin/screens/indopin_8.webp"
+      ]
     },
     {
       "id": 8,
@@ -405,7 +425,7 @@
       "title": "Raddiwalla",
       "tagline": "Personal product \u2014 doorstep scrap pickup for iOS, Android & web",
       "description": "Personal project: Raddiwalla (raddiwala / kabadiwala) \u2014 doorstep scrap pickup and recycling across Flutter apps for iOS & Android plus website at raddiwalla.com.",
-      "thumbnail": "/projects/raddiwalla-icon.png",
+      "thumbnail": "/projects/raddiwalla/icon.png",
       "tech": [
         "Flutter",
         "React",
@@ -463,7 +483,7 @@
       "title": "Daylight",
       "tagline": "iOS \u2014 better energy for your home",
       "description": "Native iOS app for home energy tracking and upgrades \u2014 SwiftUI with secure auth, push notifications, Intercom, GraphQL, and deep linking. iOS only.",
-      "thumbnail": "/projects/daylight-icon.png",
+      "thumbnail": "/projects/daylight/icon.png",
       "tech": [
         "SwiftUI",
         "GraphQL",
@@ -510,7 +530,13 @@
           "Intercom & push integrated"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/daylight/screens/daylight_1.webp",
+        "/projects/daylight/screens/daylight_2.webp",
+        "/projects/daylight/screens/daylight_3.webp",
+        "/projects/daylight/screens/daylight_4.webp",
+        "/projects/daylight/screens/daylight_5.webp"
+      ]
     },
     {
       "id": 4,
@@ -519,7 +545,7 @@
       "title": "Interpretrain",
       "tagline": "iOS \u2014 interpreter training with play & record",
       "description": "Education app for interpreters \u2014 dual-channel play & record, cloud practice storage, scoring, and offline training. Native iOS.",
-      "thumbnail": "/projects/interpretrain-icon.png",
+      "thumbnail": "/projects/interpretrain/icon.png",
       "tech": [
         "Storyboard",
         "Firebase",
@@ -562,7 +588,17 @@
           "Smoother media loading"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/interpretrain/screens/interpretrain_1.webp",
+        "/projects/interpretrain/screens/interpretrain_2.webp",
+        "/projects/interpretrain/screens/interpretrain_3.webp",
+        "/projects/interpretrain/screens/interpretrain_4.webp",
+        "/projects/interpretrain/screens/interpretrain_5.webp",
+        "/projects/interpretrain/screens/interpretrain_6.webp",
+        "/projects/interpretrain/screens/interpretrain_7.webp",
+        "/projects/interpretrain/screens/interpretrain_8.webp",
+        "/projects/interpretrain/screens/interpretrain_9.webp"
+      ]
     },
     {
       "id": 5,
@@ -571,7 +607,7 @@
       "title": "Digicat Jewelry IT",
       "tagline": "Freelance iOS \u2014 jewelry catalog & sales app",
       "description": "Freelance iOS jewelry catalog app \u2014 barcode/QR product selection, offline catalogs, quotations, and media-heavy inventory workflows with Firebase sync.",
-      "thumbnail": "/projects/digicat-jewelry-icon.png",
+      "thumbnail": "/projects/digicat-jewelry/icon.png",
       "tech": [
         "Storyboard",
         "Firebase",
@@ -613,7 +649,13 @@
           "Firebase & SDWebImage media"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/digicat-jewelry/screens/digicat_1.webp",
+        "/projects/digicat-jewelry/screens/digicat_2.webp",
+        "/projects/digicat-jewelry/screens/digicat_3.webp",
+        "/projects/digicat-jewelry/screens/digicat_4.webp",
+        "/projects/digicat-jewelry/screens/digicat_5.webp"
+      ]
     },
     {
       "id": 6,
@@ -622,7 +664,7 @@
       "title": "Jewelry ERP",
       "tagline": "Freelance iOS \u2014 manufacturing ERP for jewelry factories",
       "description": "Freelance iOS ERP for jewelry manufacturing \u2014 track WIP, client balances, orders, stock, and factory reports. Built with SwiftUI and MVVM.",
-      "thumbnail": "/projects/jewelry-erp-icon.png",
+      "thumbnail": "/projects/jewelry-erp/icon.png",
       "tech": [
         "SwiftUI",
         "MVVM",
@@ -664,7 +706,10 @@
           "Firebase-backed production flows"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/jewelry-erp/screens/jewellery_erp_1.webp",
+        "/projects/jewelry-erp/screens/jewellery_erp_2.webp"
+      ]
     },
     {
       "id": 7,
@@ -673,7 +718,7 @@
       "title": "Testpaper Live",
       "tagline": "Freelance iOS \u2014 nursing & paramedical exam prep",
       "description": "Freelance iOS learning platform for nursing and paramedical exams \u2014 mock tests, PDF notes, live classes, and deep-linked lessons. Built with SwiftUI and MVVM.",
-      "thumbnail": "/projects/testpaper-live-icon.png",
+      "thumbnail": "/projects/testpaper-live/icon.png",
       "tech": [
         "SwiftUI",
         "MVVM",
@@ -715,7 +760,13 @@
           "SDWebImage media pipeline"
         ]
       },
-      "screens": []
+      "screens": [
+        "/projects/testpaper-live/screens/testpaperlive_1.webp",
+        "/projects/testpaper-live/screens/testpaperlive_2.webp",
+        "/projects/testpaper-live/screens/testpaperlive_3.webp",
+        "/projects/testpaper-live/screens/testpaperlive_4.webp",
+        "/projects/testpaper-live/screens/testpaperlive_5.webp"
+      ]
     }
   ],
   "testimonials": [

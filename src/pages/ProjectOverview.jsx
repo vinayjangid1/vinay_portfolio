@@ -1,21 +1,38 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import TechLogo from '../components/TechLogo'
 import ProjectLinks from '../components/ProjectLinks'
+import PreviewScreensCarousel from '../components/PreviewScreensCarousel'
 import ResumeFAB from '../components/ResumeFAB'
 import SEO from '../components/SEO'
+import { loadProjectScreens } from '../lib/projectScreens'
 import data from '../data.json'
 
 export default function ProjectOverview() {
   const { slug } = useParams()
   const navigate = useNavigate()
   const project = data.projects.find((p) => p.slug === slug)
+  const [screens, setScreens] = useState([])
 
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [slug])
+
+  useEffect(() => {
+    if (!project) {
+      setScreens([])
+      return
+    }
+    let active = true
+    loadProjectScreens(project).then((items) => {
+      if (active) setScreens(items)
+    })
+    return () => {
+      active = false
+    }
+  }, [project])
 
   if (!project) {
     return (
@@ -33,10 +50,6 @@ export default function ProjectOverview() {
 
   const { overview } = project
   const icon = project.thumbnail
-  // Preview screens only — never reuse the app icon here
-  const screens = (project.screens || project.gallery || []).filter(
-    (src) => src && src !== icon
-  )
 
   return (
     <div className="min-h-screen pb-20">
@@ -111,45 +124,22 @@ export default function ProjectOverview() {
       </header>
 
       <div className="mx-auto max-w-6xl space-y-16 px-5 py-14 md:px-8 md:py-20">
-        {/* Preview screens — separate from app icon */}
-        <motion.section
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.12, duration: 0.55 }}
-        >
-          <h2 className="font-display mb-2 text-2xl font-bold text-[#ffffff] md:text-3xl">
-            Preview screens
-          </h2>
-          <p className="mb-6 text-sm text-[#a3a3a3]">
-            Real app screenshots — separate from the app icon above.
-          </p>
-
-          {screens.length > 0 ? (
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {screens.map((src, i) => (
-                <div
-                  key={`${src}-${i}`}
-                  className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]"
-                >
-                  <img
-                    src={src}
-                    alt={`${project.title} preview ${i + 1}`}
-                    className="aspect-[9/16] w-full object-contain object-top md:aspect-[3/4]"
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] px-6 py-14 text-center">
-              <p className="text-sm text-[#a3a3a3]">
-                Preview screens coming soon — drop screenshots in{' '}
-                <code className="text-[#ff6b00]">public/projects/</code> and list
-                them under <code className="text-[#ff6b00]">screens</code> in
-                data.json.
-              </p>
-            </div>
-          )}
-        </motion.section>
+        {screens.length > 0 && (
+          <motion.section
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.12, duration: 0.55 }}
+          >
+            <h2 className="font-display mb-6 text-2xl font-bold text-[#ffffff] md:text-3xl">
+              Preview screens
+            </h2>
+            <PreviewScreensCarousel
+              screens={screens}
+              title={project.title}
+              accent={project.accent}
+            />
+          </motion.section>
+        )}
 
         <section>
           <h2 className="font-display mb-4 text-2xl font-bold text-[#ffffff] md:text-3xl">

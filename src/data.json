@@ -286,13 +286,9 @@
       "slug": "evolv-solutions",
       "companyId": "digi-doodle",
       "title": "Evolv Solutions",
-      "tagline": "AI vehicle imaging for dealerships — App Store & Play Store",
+      "tagline": "AI vehicle imaging for dealerships \u2014 App Store & Play Store",
       "description": "Professional vehicle photography powered by AI. Capture on the forecourt; Evolv processes backgrounds, spec checks, and publish-ready imagery at scale for car dealers.",
       "thumbnail": "/projects/evolv-solutions-icon.png",
-      "gallery": [
-        "/projects/evolv-solutions-icon.png",
-        "/projects/vehicle-inspection-flow.svg"
-      ],
       "tech": [
         "Flutter",
         "Swift",
@@ -309,7 +305,10 @@
         "tensorflow",
         "firebase"
       ],
-      "platforms": ["ios", "android"],
+      "platforms": [
+        "ios",
+        "android"
+      ],
       "links": {
         "appStore": "https://apps.apple.com/in/app/evolv-solutions/id6764273722",
         "playStore": "https://play.google.com/store/apps/details?id=com.evolv.solution.app&pcampaignid=web_share",
@@ -338,23 +337,16 @@
           "Native platform channel bridge"
         ]
       },
-      "platforms": [
-        "ios",
-        "android"
-      ]
+      "screens": []
     },
     {
       "id": 2,
       "slug": "indopin",
       "companyId": "personal",
       "title": "Indopin",
-      "tagline": "Personal product \u2014 iOS, Android & React website",
-      "description": "Personal project: business management across Flutter (iOS & Android) and a React website \u2014 real-time billing, inventory tracking, and vendor communication.",
-      "thumbnail": "/projects/dealership-events.svg",
-      "gallery": [
-        "/projects/dealership-events.svg",
-        "/projects/dealership-events-web.svg"
-      ],
+      "tagline": "Personal product \u2014 GST invoicing for iOS, Android & web",
+      "description": "Personal project: Indopin Invoice Maker \u2014 create GST invoices, track payments, manage customers, and view business reports. Flutter apps for iOS & Android plus website at indopin.com.",
+      "thumbnail": "/projects/indopin-icon.png",
       "tech": [
         "Flutter",
         "React",
@@ -371,12 +363,17 @@
         "graphql",
         "firebase"
       ],
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
       "links": {
-        "appStore": null,
-        "playStore": null,
-        "website": null
+        "appStore": "https://apps.apple.com/in/app/indopin-invoice-maker-app/id6749641321",
+        "playStore": "https://play.google.com/store/search?q=indopin&c=apps",
+        "website": "https://indopin.com/"
       },
-      "live": null,
+      "live": "https://indopin.com/",
       "github": "https://github.com",
       "accent": "#ff8c1a",
       "overview": {
@@ -399,24 +396,16 @@
           "React website + GraphQL API"
         ]
       },
-      "platforms": [
-        "ios",
-        "android",
-        "web"
-      ]
+      "screens": []
     },
     {
       "id": 8,
       "slug": "raddiwalla",
       "companyId": "personal",
       "title": "Raddiwalla",
-      "tagline": "Personal product \u2014 scrap marketplace for iOS, Android & web",
-      "description": "Personal project: Raddiwalla connects scrap buyers and sellers \u2014 Flutter apps for iOS & Android plus a React website for listings, orders, and day-to-day trading.",
-      "thumbnail": "/projects/scrap-marketplace.svg",
-      "gallery": [
-        "/projects/scrap-marketplace.svg",
-        "/projects/scrap-marketplace-flow.svg"
-      ],
+      "tagline": "Personal product \u2014 doorstep scrap pickup for iOS, Android & web",
+      "description": "Personal project: Raddiwalla (raddiwala / kabadiwala) \u2014 doorstep scrap pickup and recycling across Flutter apps for iOS & Android plus website at raddiwalla.com.",
+      "thumbnail": "/projects/raddiwalla-icon.png",
       "tech": [
         "Flutter",
         "React",
@@ -432,12 +421,17 @@
         "graphql",
         "firebase"
       ],
+      "platforms": [
+        "ios",
+        "android",
+        "web"
+      ],
       "links": {
         "appStore": null,
         "playStore": null,
-        "website": null
+        "website": "https://raddiwalla.com/"
       },
-      "live": null,
+      "live": "https://raddiwalla.com/",
       "github": "https://github.com",
       "accent": "#e65c00",
       "overview": {
@@ -460,24 +454,16 @@
           "React website included"
         ]
       },
-      "platforms": [
-        "ios",
-        "android",
-        "web"
-      ]
+      "screens": []
     },
     {
       "id": 3,
       "slug": "daylight",
       "companyId": "arthonsys",
       "title": "Daylight",
-      "tagline": "iOS — better energy for your home",
-      "description": "Native iOS app for home energy tracking and upgrades — SwiftUI with secure auth, push notifications, Intercom, GraphQL, and deep linking. iOS only.",
+      "tagline": "iOS \u2014 better energy for your home",
+      "description": "Native iOS app for home energy tracking and upgrades \u2014 SwiftUI with secure auth, push notifications, Intercom, GraphQL, and deep linking. iOS only.",
       "thumbnail": "/projects/daylight-icon.png",
-      "gallery": [
-        "/projects/daylight-icon.png",
-        "/projects/car-events-map.svg"
-      ],
       "tech": [
         "SwiftUI",
         "GraphQL",
@@ -493,7 +479,9 @@
         "firebase",
         "apple"
       ],
-      "platforms": ["ios"],
+      "platforms": [
+        "ios"
+      ],
       "links": {
         "appStore": "https://apps.apple.com/us/app/daylight-app/id6450997694",
         "playStore": null,
@@ -521,19 +509,17 @@
           "Apple Sign-In + deep links",
           "Intercom & push integrated"
         ]
-      }
+      },
+      "screens": []
     },
     {
       "id": 4,
       "slug": "interpretrain",
       "companyId": "arthonsys",
       "title": "Interpretrain",
-      "tagline": "iOS — interpreter training with play & record",
-      "description": "Education app for interpreters — dual-channel play & record, cloud practice storage, scoring, and offline training. Native iOS.",
+      "tagline": "iOS \u2014 interpreter training with play & record",
+      "description": "Education app for interpreters \u2014 dual-channel play & record, cloud practice storage, scoring, and offline training. Native iOS.",
       "thumbnail": "/projects/interpretrain-icon.png",
-      "gallery": [
-        "/projects/interpretrain-icon.png"
-      ],
       "tech": [
         "Storyboard",
         "Firebase",
@@ -545,7 +531,9 @@
         "firebase",
         "apple"
       ],
-      "platforms": ["ios"],
+      "platforms": [
+        "ios"
+      ],
       "links": {
         "appStore": "https://apps.apple.com/in/app/interpretrain/id1497631411",
         "playStore": null,
@@ -568,25 +556,22 @@
           "Optimized image loading with SDWebImage.",
           "Improved reliability of real-time learner updates."
         ],
-                        "highlights": [
+        "highlights": [
           "Optimized content delivery",
           "Firebase-backed notifications",
           "Smoother media loading"
         ]
-      }
+      },
+      "screens": []
     },
     {
       "id": 5,
       "slug": "digicat-jewelry",
       "companyId": "freelance",
       "title": "Digicat Jewelry IT",
-      "tagline": "Freelance \u2014 jewelry management with local storage & media",
-      "description": "Freelance iOS jewelry management app \u2014 Storyboard client with Firebase sync and SDWebImage for catalogs and media-heavy inventory workflows.",
-      "thumbnail": "/projects/dealership-events.svg",
-      "gallery": [
-        "/projects/dealership-events.svg",
-        "/projects/dealership-events-web.svg"
-      ],
+      "tagline": "Freelance iOS \u2014 jewelry catalog & sales app",
+      "description": "Freelance iOS jewelry catalog app \u2014 barcode/QR product selection, offline catalogs, quotations, and media-heavy inventory workflows with Firebase sync.",
+      "thumbnail": "/projects/digicat-jewelry-icon.png",
       "tech": [
         "Storyboard",
         "Firebase",
@@ -597,8 +582,11 @@
         "firebase",
         "apple"
       ],
+      "platforms": [
+        "ios"
+      ],
       "links": {
-        "appStore": null,
+        "appStore": "https://apps.apple.com/in/app/digicat-jewellery-it/id890710414",
         "playStore": null,
         "website": null
       },
@@ -625,22 +613,16 @@
           "Firebase & SDWebImage media"
         ]
       },
-      "platforms": [
-        "ios"
-      ]
+      "screens": []
     },
     {
       "id": 6,
       "slug": "jewelry-erp",
       "companyId": "freelance",
       "title": "Jewelry ERP",
-      "tagline": "Freelance \u2014 production & workflow ERP for manufacturing",
-      "description": "Freelance ERP app for jewelry manufacturing \u2014 production and workflow automation built with SwiftUI, MVVM, and Firebase.",
-      "thumbnail": "/projects/car-events.svg",
-      "gallery": [
-        "/projects/car-events.svg",
-        "/projects/car-events-map.svg"
-      ],
+      "tagline": "Freelance iOS \u2014 manufacturing ERP for jewelry factories",
+      "description": "Freelance iOS ERP for jewelry manufacturing \u2014 track WIP, client balances, orders, stock, and factory reports. Built with SwiftUI and MVVM.",
+      "thumbnail": "/projects/jewelry-erp-icon.png",
       "tech": [
         "SwiftUI",
         "MVVM",
@@ -651,8 +633,11 @@
         "firebase",
         "apple"
       ],
+      "platforms": [
+        "ios"
+      ],
       "links": {
-        "appStore": null,
+        "appStore": "https://apps.apple.com/in/app/jewelleryerp/id6480185072",
         "playStore": null,
         "website": null
       },
@@ -679,22 +664,16 @@
           "Firebase-backed production flows"
         ]
       },
-      "platforms": [
-        "ios"
-      ]
+      "screens": []
     },
     {
       "id": 7,
       "slug": "testpaper-live",
       "companyId": "freelance",
       "title": "Testpaper Live",
-      "tagline": "Freelance \u2014 medical e-learning with video & deep linking",
-      "description": "Freelance e-learning app for medical students \u2014 SwiftUI + MVVM with SDWebImage for content media, video playback, and deep linking into lessons.",
-      "thumbnail": "/projects/scrap-marketplace.svg",
-      "gallery": [
-        "/projects/scrap-marketplace.svg",
-        "/projects/scrap-marketplace-flow.svg"
-      ],
+      "tagline": "Freelance iOS \u2014 nursing & paramedical exam prep",
+      "description": "Freelance iOS learning platform for nursing and paramedical exams \u2014 mock tests, PDF notes, live classes, and deep-linked lessons. Built with SwiftUI and MVVM.",
+      "thumbnail": "/projects/testpaper-live-icon.png",
       "tech": [
         "SwiftUI",
         "MVVM",
@@ -705,8 +684,11 @@
         "apple",
         "firebase"
       ],
+      "platforms": [
+        "ios"
+      ],
       "links": {
-        "appStore": null,
+        "appStore": "https://apps.apple.com/in/app/testpaperlive/id6480334115",
         "playStore": null,
         "website": null
       },
@@ -733,9 +715,7 @@
           "SDWebImage media pipeline"
         ]
       },
-      "platforms": [
-        "ios"
-      ]
+      "screens": []
     }
   ],
   "testimonials": [

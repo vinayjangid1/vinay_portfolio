@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowLeft, CheckCircle2, Github } from 'lucide-react'
+import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import TechLogo from '../components/TechLogo'
 import ProjectLinks from '../components/ProjectLinks'
 import ResumeFAB from '../components/ResumeFAB'
@@ -32,11 +32,16 @@ export default function ProjectOverview() {
   }
 
   const { overview } = project
+  const icon = project.thumbnail
+  // Preview screens only — never reuse the app icon here
+  const screens = (project.screens || project.gallery || []).filter(
+    (src) => src && src !== icon
+  )
 
   return (
     <div className="min-h-screen pb-20">
       <SEO project={project} />
-      {/* Hero banner */}
+
       <header className="relative overflow-hidden border-b border-white/5">
         <div
           className="absolute inset-0 opacity-40"
@@ -58,98 +63,94 @@ export default function ProjectOverview() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8"
           >
-            <p
-              className="mb-3 text-sm font-medium tracking-[0.2em] uppercase"
-              style={{ color: project.accent }}
-            >
-              Project overview
-            </p>
-            <h1 className="font-display max-w-3xl text-4xl font-extrabold tracking-tight text-[#ffffff] sm:text-5xl md:text-6xl">
-              {project.title}
-            </h1>
-            <p className="mt-4 max-w-2xl text-lg text-[#a3a3a3]">
-              {project.tagline || project.description}
-            </p>
+            {/* App icon */}
+            {icon && (
+              <div className="shrink-0 overflow-hidden rounded-[1.35rem] border border-white/10 shadow-[0_16px_48px_rgba(0,0,0,0.45)]">
+                <img
+                  src={icon}
+                  alt={`${project.title} app icon`}
+                  className="h-24 w-24 object-contain sm:h-28 sm:w-28 md:h-32 md:w-32"
+                />
+              </div>
+            )}
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              {(project.techLogos || []).map((logo, i) => (
-                <span
-                  key={`${logo}-${i}`}
-                  className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-[#e5e5e5]"
-                >
-                  <TechLogo
-                    logo={logo}
-                    name={project.tech[i]}
-                    size={16}
-                  />
-                  {project.tech[i] || logo}
-                </span>
-              ))}
-            </div>
-
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <ProjectLinks project={project} size="lg" />
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-[#ffffff] transition hover:border-[#ff6b00]/50 hover:text-[#ff6b00]"
-                >
-                  <Github size={16} />
-                  GitHub
-                </a>
-              )}
-              <Link
-                to="/#projects"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-2.5 text-sm font-medium text-[#a3a3a3] transition hover:text-[#ffffff]"
+            <div className="min-w-0 flex-1">
+              <p
+                className="mb-2 text-sm font-medium tracking-[0.2em] uppercase"
+                style={{ color: project.accent }}
               >
-                All projects
-              </Link>
+                Project overview
+              </p>
+              <h1 className="font-display text-3xl font-extrabold tracking-tight text-[#ffffff] sm:text-4xl md:text-5xl">
+                {project.title}
+              </h1>
+              <p className="mt-3 max-w-2xl text-base text-[#a3a3a3] md:text-lg">
+                {project.tagline || project.description}
+              </p>
+
+              <div className="mt-5 flex flex-wrap items-center gap-3">
+                <ProjectLinks project={project} size="lg" />
+              </div>
             </div>
           </motion.div>
+
+          <div className="mt-8 flex flex-wrap items-center gap-2">
+            {(project.techLogos || []).map((logo, i) => (
+              <span
+                key={`${logo}-${i}`}
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-sm text-[#e5e5e5]"
+              >
+                <TechLogo logo={logo} name={project.tech?.[i]} size={16} />
+                {project.tech?.[i] || logo}
+              </span>
+            ))}
+          </div>
         </div>
       </header>
 
       <div className="mx-auto max-w-6xl space-y-16 px-5 py-14 md:px-8 md:py-20">
-        {/* Thumbnails / gallery */}
+        {/* Preview screens — separate from app icon */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.15, duration: 0.6 }}
+          transition={{ delay: 0.12, duration: 0.55 }}
         >
-          <h2 className="font-display mb-6 text-2xl font-bold text-[#ffffff] md:text-3xl">
-            Screens & visuals
+          <h2 className="font-display mb-2 text-2xl font-bold text-[#ffffff] md:text-3xl">
+            Preview screens
           </h2>
-          <div className="grid gap-4 md:grid-cols-2">
-            {(project.gallery?.length ? project.gallery : [project.thumbnail]).map(
-              (src, i) => (
+          <p className="mb-6 text-sm text-[#a3a3a3]">
+            Real app screenshots — separate from the app icon above.
+          </p>
+
+          {screens.length > 0 ? (
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {screens.map((src, i) => (
                 <div
-                  key={src}
-                  className={`flex items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-transparent p-4 ${
-                    i === 0 && (project.gallery?.length || 1) === 1
-                      ? 'md:col-span-2'
-                      : ''
-                  }`}
+                  key={`${src}-${i}`}
+                  className="overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]"
                 >
                   <img
                     src={src}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    className="max-h-72 w-full object-contain md:max-h-96"
+                    alt={`${project.title} preview ${i + 1}`}
+                    className="aspect-[9/16] w-full object-contain object-top md:aspect-[3/4]"
                   />
                 </div>
-              )
-            )}
-          </div>
-          <p className="mt-3 text-sm text-[#a3a3a3]">
-            Replace files in <code className="text-[#ff6b00]">public/projects/</code> with
-            your real app screenshots — paths are set in{' '}
-            <code className="text-[#ff6b00]">src/data.json</code>.
-          </p>
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-2xl border border-dashed border-white/15 bg-white/[0.02] px-6 py-14 text-center">
+              <p className="text-sm text-[#a3a3a3]">
+                Preview screens coming soon — drop screenshots in{' '}
+                <code className="text-[#ff6b00]">public/projects/</code> and list
+                them under <code className="text-[#ff6b00]">screens</code> in
+                data.json.
+              </p>
+            </div>
+          )}
         </motion.section>
 
-        {/* Problem */}
         <section>
           <h2 className="font-display mb-4 text-2xl font-bold text-[#ffffff] md:text-3xl">
             The problem
@@ -159,7 +160,6 @@ export default function ProjectOverview() {
           </p>
         </section>
 
-        {/* How it works */}
         <section>
           <h2 className="font-display mb-6 text-2xl font-bold text-[#ffffff] md:text-3xl">
             How it works
@@ -182,7 +182,6 @@ export default function ProjectOverview() {
           </ol>
         </section>
 
-        {/* What I did */}
         <section>
           <h2 className="font-display mb-6 text-2xl font-bold text-[#ffffff] md:text-3xl">
             What I did
@@ -204,7 +203,6 @@ export default function ProjectOverview() {
           </ul>
         </section>
 
-        {/* Highlights */}
         {overview.highlights?.length > 0 && (
           <section>
             <h2 className="font-display mb-6 text-2xl font-bold text-[#ffffff] md:text-3xl">
